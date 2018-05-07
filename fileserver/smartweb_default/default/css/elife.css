@@ -1,0 +1,111 @@
+.browse-item
+{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    border: #ccc thin solid;
+    border-radius: 5px;
+    margin: 5px;
+    display: table;
+    padding: 0;
+    cursor: pointer;
+}
+.browse-item div
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+.browse-item div span
+{
+    background: #fff;
+    font-weight: bold;
+    opacity: 0.9;
+    padding: 5px;
+}
+.elife-sile-popup
+{
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: auto;
+    z-index: 1000;
+}
+.product-forder-path
+{
+    cursor: pointer;
+}
+.autocomplete
+{
+    position: absolute;
+    z-index: 100;
+}
+
+#browseproduct{
+    background: #fff;
+}
+.activeitem{
+    background:#f9a124 !important;
+}
+.colsearch
+{
+    width: 200px;
+}
+#rpt-display
+{
+    color: #000000;
+}
+.frmReport table
+{
+    width: 100%;
+}
+.frmReport table tr
+{
+    vertical-align: top;
+}
+.frmReport table td
+{
+    padding: 3px;
+}
+#rpt-display .block
+{
+    padding-bottom: 100px;
+}
+.listitem li
+{
+    display: inline;
+    width: auto;
+    padding: 5px;
+    width: 100%;
+}
+
+.form-group ul{
+    list-style: none;
+}
+.form-group ul li{
+    padding: 3px 0;
+}
+.elife-left { float: left; }
+.elife-right { float: right; }
+.elife-center { margin:0 auto; }
+.clear, .clearer {clear: both;}
+.clearer {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+}
+.elife-fullwidth{
+    width: 100%;
+}
+.clearfix:after, .clearfix:before {
+    clear: both;
+}
+.clearfix:after, .clearfix:before {
+    content: "";
+    display: table;
+}
+.dataitem{
+    width: 80px;
+}

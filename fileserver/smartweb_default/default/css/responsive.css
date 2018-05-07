@@ -1,0 +1,23 @@
+.mobile-show
+{
+    display: none;
+
+}
+.mobile-show .itemrow
+{
+    border: thin solid #d3d3d3;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+}
+@media (max-width: 800px) {
+    .mobile-show
+    {
+        display: block;
+    }
+    .desktop-show
+    {
+        display: none;
+    }
+
+}

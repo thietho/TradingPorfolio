@@ -1,0 +1,126 @@
+<div class="desktop-show">
+    <table class="table"></table>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>No.</th>
+                {TableHearder}
+                <th class="tool-title">Tool</th>
+            </tr>
+            <?php $index = ($objPage['pape']-1) * $objPage['itemsPerPage'];?>
+            <?php if(isset(${Table}s)) { foreach(${Table}s as ${Table}) { ?>
+            <tr>
+                <td class="text-center"><?php echo ++$index; ?></td>
+                {TableBody}
+                <td class="text-center">
+                    <?php if($_GET['type'] == 'popup'){ ?>
+                    <button class="btn btn-sm btn-primary btn{ObjName}Select"
+                            {BtnSelect}
+                            ><span class="fa fa-check"></span> Select</button>
+                    <?php }else{ ?>
+                    <button type="button" class="btn btn-sm btn-default btn-icon btn-danger btn-warning margin-0 margin-right-5" onclick="{Prefix}{ObjName}.showDeleteDialog(<?php echo ${Table}['id']?>, '<?php echo ${Table}['{ColName}'] ?>')"><span class="fa fa-trash"></span></button>
+                    <button onclick="window.location.href='<?php echo HTTP_WEB ?>?route={Path}/update&id=<?php echo ${Table}[id] ?>'" type="button" class="btn btn-sm btn-default btn-icon btn-edit btn-info margin-0 margin-right-5"><span class="fa fa-edit"></span></button>
+                    <?php } ?>
+                </td>
+            </tr>
+            <?php } } ?>
+        </table>
+    </div>
+</div>
+
+<div class="mobile-show">
+    <div class="block" id="fitermobile{ObjName}">
+        <div class="form-group">
+
+            <div class="col-md-6">
+                <select id="sortcol" class="form-control">
+                    <option value="">Sort</option>
+                    {MobileColSort}
+                </select>
+            </div>
+            <div class="col-md-6">
+                <select id="sorttype" class="form-control">
+                    <option value=""></option>
+                    <option value="asc">ASC</option>
+                    <option value="desc">DESC</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-success form-control" id="btnSort{ObjName}"><span class="fa fa-sort"></span> Sort</button>
+            </div>
+        </div>
+    </div>
+    <?php $index = 1;?>
+    <?php if(isset(${Table}s)) { foreach(${Table}s as ${Table}) { ?>
+    <div class="itemrow">
+        <label>#</label> <?php echo $index++ ?><br>
+        {MoblieRowShow}
+        <div class="clear-mobile"></div>
+        <div class="pull-right">
+            <?php if($_GET['type'] == 'popup'){ ?>
+                <button class="btn btn-sm btn-primary btn{ObjName}Select"
+                        {BtnSelect}
+                        ><span class="fa fa-check"></span> Select</button>
+                <?php }else{ ?>
+            <button type="button" class="btn btn-default btn-icon btn-danger btn-warning margin-0 margin-right-5" onclick="{Prefix}{ObjName}.showDeleteDialog(<?php echo ${Table}['id']?>, '<?php echo ${Table}['{ColName}'] ?>')"><span class="fa fa-trash"></span></button>
+            <button onclick="window.location.href='<?php echo HTTP_WEB ?>?route={Path}/update&id=<?php echo ${Table}[id] ?>'" type="button" class="btn btn-default btn-icon btn-edit btn-info margin-0 margin-right-5"><span class="fa fa-edit"></span></button>
+            <?php } ?>
+        </div>
+        <div class="clear-mobile"></div>
+    </div>
+    <?php } } ?>
+</div>
+
+<?php echo $pagination?>
+<script type="application/javascript">
+    {Prefix}{ObjName}.showTotal("<?php echo $this->string->numberFormate($total)?> items");
+    var sortcol = "<?php echo $_GET['sortcol']?>";
+    var sorttype = "<?php echo $_GET['sorttype']?>";
+    $('#fitermobile{ObjName} #sortcol').val(sortcol);
+        $('#fitermobile{ObjName} #sorttype').val(sorttype);
+    
+        $('#fitermobile{ObjName} #btnSort{ObjName}').click(function(){
+            $('#frm{ObjName}Search #sorttype').val($('#fitermobile{ObjName} #sorttype').val());
+            $('#frm{ObjName}Search #sortcol').val($('#fitermobile{ObjName} #sortcol').val());
+            {Prefix}{ObjName}.search();
+        });
+    $('#{Table}-list th').each(function(e){
+        if($(this).attr('sortcol') == sortcol)
+        {
+            $(this).removeClass('sort-default');
+            switch(sorttype)
+            {
+                case 'asc':
+                    $(this).addClass('sort-asc');
+                    break;
+                case 'desc':
+                    $(this).addClass('sort-desc');
+                    break;
+            }
+        }
+    });
+    $('.sort-default').click(function(){
+        $('#frm{ObjName}Search #sorttype').val('asc');
+        $('#frm{ObjName}Search #sortcol').val($(this).attr('sortcol'));
+        {Prefix}{ObjName}.search();
+        $(this).removeClass('sort-asc');
+        $(this).addClass('sort-desc');
+    });
+    $('.sort-asc').click(function(){
+        $('#frm{ObjName}Search #sorttype').val('desc');
+        $('#frm{ObjName}Search #sortcol').val($(this).attr('sortcol'));
+        {Prefix}{ObjName}.search();
+        $(this).removeClass('sort-asc');
+        $(this).addClass('sort-desc');
+    });
+    $('.sort-desc').click(function(){
+        $('#frm{ObjName}Search #sorttype').val('asc');
+        $('#frm{ObjName}Search #sortcol').val($(this).attr('sortcol'));
+        {Prefix}{ObjName}.search();
+        $(this).removeClass('sort-desc');
+        $(this).addClass('sort-asc');
+
+    });
+
+
+</script>

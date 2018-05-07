@@ -1,0 +1,109 @@
+RewriteEngine On
+#RewriteBase /
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+RewriteRule ^images/root/([a-zA-Z0-9_]*)/([^?]*)$ ../fileserver/images/smartweb_default/root/$1/$2 [L,QSA]
+RewriteRule ^images/([a-zA-Z0-9_]*)-([0-9]*)x([0-9]*)/([a-zA-Z0-9_]*)/([^?]*)$ ../fileserver/images/smartweb_default/$1-$2x$3/$4/$5 [L,QSA]
+RewriteRule ^([a-zA-Z][a-zA-Z])-([a-zA-Z][a-zA-Z])/images/root/([a-zA-Z0-9_]*)/([^?]*)$ ../fileserver/images/smartweb_default/root/$3/$4 [L,QSA]
+RewriteRule ^([a-zA-Z][a-zA-Z])-([a-zA-Z][a-zA-Z])/images/([a-zA-Z0-9_]*)-([0-9]*)x([0-9]*)/([a-zA-Z0-9_]*)/([^?]*)$ ../fileserver/images/smartweb_default/$3-$4x$5/$6/$7 [L,QSA]
+
+
+RewriteRule ^([a-zA-Z][a-zA-Z])-([a-zA-Z][a-zA-Z])/([^?]*) index.php?lang=$1&countrycode=$2&%{QUERY_STRING} [L,QSA]
+
+
+
+Header set Connection keep-alive
+
+#ETag resource
+#ETag Configuration
+#xac thuc server va browser
+FileETag MTime Size
+#bo xac thuc server va browser
+#FileETag none
+
+#encoding for files
+AddDefaultCharset utf-8
+AddCharset utf-8 .atom .css .js .json .rss .vtt .webapp .xml
+
+
+#compress resource
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE 	application/atom+xml \
+								application/javascript \
+                                application/json \
+                                application/rss+xml \
+                                application/vnd.ms-fontobject \
+                                application/x-font-ttf \
+                                application/x-web-app-manifest+json \
+                                application/xhtml+xml \
+                                application/xml \
+                                font/opentype \
+                                image/svg+xml \
+                                image/x-icon \
+                                text/css \
+                                text/html \
+                                text/plain \
+                                text/x-component \
+                                text/xml
+
+
+#DeflateCompressionLevel 9
+
+#BrowserMatch ^Mozilla/4 gzip-only-text/html
+#BrowserMatch ^Mozilla/4\.0[678] no-gzip
+#BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+#DeflateFilterNote Input instream
+#DeflateFilterNote Output outstream
+#DeflateFilterNote Ratio ratio
+
+#expires resource
+ExpiresActive on
+    ExpiresDefault "access plus 1 month"
+
+  # CSS
+    ExpiresByType text/css "access plus 1 year"
+
+  # Data interchange
+    ExpiresByType application/json "access plus 0 seconds"
+    ExpiresByType application/xml "access plus 0 seconds"
+    ExpiresByType text/xml "access plus 0 seconds"
+
+  # Favicon (cannot be renamed!) and cursor images
+    ExpiresByType image/x-icon "access plus 1 week"
+
+  # HTML components (HTCs)
+    ExpiresByType text/x-component "access plus 1 month"
+
+  # HTML
+    ExpiresByType text/html "access plus 0 seconds"
+
+  # JavaScript
+    ExpiresByType application/javascript "access plus 1 year"
+
+  # Manifest files
+    ExpiresByType application/x-web-app-manifest+json "access plus 0 seconds"
+    ExpiresByType text/cache-manifest "access plus 0 seconds"
+
+#    Media
+#    ExpiresByType audio/ogg "access plus 1 month"
+#    ExpiresByType image/gif "access plus 1 month"
+#    ExpiresByType image/jpeg "access plus 1 month"
+#    ExpiresByType image/jpg "access plus 1 month"
+#    ExpiresByType image/png "access plus 1 month"
+#    ExpiresByType video/mp4 "access plus 1 month"
+#    ExpiresByType video/ogg "access plus 1 month"
+#    ExpiresByType video/webm "access plus 1 month"
+
+  # Web feeds
+    ExpiresByType application/atom+xml "access plus 1 hour"
+    ExpiresByType application/rss+xml "access plus 1 hour"
+
+  # Web fonts
+    #ExpiresByType application/font-woff "access plus 1 month"
+    #ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+    ExpiresByType application/x-font-ttf "access plus 1 month"
+    ExpiresByType font/opentype "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"

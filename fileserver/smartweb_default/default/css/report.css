@@ -1,0 +1,39 @@
+.text-center
+{
+    text-align: center;
+}
+.text-right
+{
+    text-align: right;
+}
+.number
+{
+    text-align: right;
+}
+.trspace{
+    padding-bottom: 20px;
+}
+.report-result
+{
+    text-decoration: underline;
+}
+.table-data
+{
+    width: 100%;
+    border-top:thin solid #000;
+    border-left:thin solid #000;
+    border-spacing: 0;
+}
+.table-data th
+{
+    border-right:thin solid #000;
+    border-bottom:thin solid #000;
+    padding: 5px;
+    text-align: center;
+}
+.table-data td
+{
+    padding: 5px;
+    border-right:thin solid #000;
+    border-bottom:thin solid #000;
+}

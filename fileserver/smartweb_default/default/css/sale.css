@@ -1,0 +1,301 @@
+#sale-header
+{
+    background: #4c4e65;
+    color: #d9d9d9;
+    padding: 15px 10px;
+}
+#sale-header table
+{
+    width: 100%;
+}
+#sale-header #date
+{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#sale-header #storeinfo span
+{
+    font-size: 3em;
+}
+#sale-header #storeinfo #name
+{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+#sale-header #storeinfo #user
+{
+    font-size: 1.1em;
+}
+#sale-header #storeinfo #info
+{
+    margin-left: 10px;
+    line-height: 16px;
+    padding: 7px 0;
+}
+.sale-control
+{
+    font-size: 3em;
+    cursor: pointer;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: #5e5e5e;
+}
+#btnNewOrder
+{
+    color: #b91e1e;
+}
+#btnOrderComplete
+{
+    color: #00a651;
+}
+#sale-title
+{
+    font-weight: bold;
+    padding: 15px 10px;
+}
+#sale-title td
+{
+    padding-right: 5px;
+}
+#sale-title .button
+{
+    background: linear-gradient(#FFF,#cccccc);
+    border: none;
+    padding: 5px 20px;
+}
+#sale-title .bs-select
+{
+    width: 214px;
+}
+#sale-title input
+{
+    border: none;
+    padding: 5px 10px;
+}
+#sale-title #btnDelOrder
+{
+    background: #f5f5f5;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#sale-title .vline
+{
+    width: 1px;
+    height: 30px;
+    background: #b2b2b2;
+
+}
+#sale-title td
+{
+    padding: 4px;
+}
+#sale-body
+{
+    background: #fbfbfb;
+}
+#sale-body #sale-content
+{
+    width: 80%;
+    padding: 15px 20px;
+}
+#sale-body table
+{
+    width: 100%;
+}
+#sale-body #sale-order table
+{
+
+    border-left:solid thin #dddddd ;
+    border-top:solid thin #dddddd ;
+    margin-top: 15px;
+}
+#sale-body #sale-order table thead
+{
+    background: #d0d0d0;
+}
+#sale-body #sale-order table tbody
+{
+    background: #f6f6f6;
+}
+#sale-body #sale-order table tfoot
+{
+    background: #ffffd7;
+}
+#sale-body #sale-order table td
+{
+    padding: 5px 10px;
+    border-right: solid thin #dddddd;
+    border-bottom: solid thin #dddddd;
+    color: #000;
+}
+#sale-body #sale-order table th
+{
+    color: #000;
+    padding: 5px 10px;
+    border-right: solid thin #dddddd;
+    border-bottom: solid thin #dddddd;
+}
+#sale-body #sale-order table tbody
+{
+    max-height:500px;
+    overflow: scroll;
+}
+#sale-body .input-touch
+{
+    background: #ffffd7;
+}
+#sale-body .input-touch .icon-barcode2
+{
+    font-size: 3em;
+    margin: 8px 5px;
+}
+#sale-body .input-touch input
+{
+    border-radius: 5px;
+    border: thin solid #d9d9d9;
+    padding: 15px 10px;
+    width: 312px;
+}
+#sale-body .input-touch button
+{
+    border-radius: 5px;
+    padding: 15px 10px;
+    font-weight: bold;
+
+}
+#sale-body #btnSeachCode
+{
+    padding: 6px 15px 14px 15px;
+    font-size: 2em;
+    line-height: 30px;
+}
+#sale-body #sale-payment
+{
+    margin-top: 15px;
+}
+#sale-body #sale-payment table thead
+{
+    background: #d0d0d0;
+}
+#sale-body #sale-payment table th
+{
+    color: #4c4e65;
+    padding: 5px 10px;
+
+}
+#sale-body #sale-payment table td
+{
+    border-bottom: thin solid #dddddd;
+    padding: 2px 5px;
+
+}
+#sale-body #sale-payment .payment-input
+{
+    background: #FFF;
+}
+#sale-body #sale-payment .payment-title
+{
+    font-size: 1.2em;
+    padding: 10px 5px;
+}
+#sale-body #sale-payment .payment-historyrow
+{
+    background: #f6f6f6;
+}
+#sale-body #sale-summary
+{
+    width: 20%;
+    background: #fff;
+    height: 100%;
+}
+#sale-body #sale-summary #total-order
+{
+    background: #f2f2f2;
+
+}
+#sale-body #sale-summary #total-order td
+{
+    padding: 15px;
+}
+#sale-body #sale-summary #total-order .number
+{
+    font-size: 1.5em;
+}
+#sale-body #sale-summary #total-order .total
+{
+    font-weight: bold;
+}
+#sale-body #sale-summary #total-order .change
+{
+    color: #c70000;
+    font-weight: bold;
+}
+#sale-body #sale-summary .customerinfo
+{
+    margin: 15px;
+    border-bottom: thin solid #bbbbbb;
+    padding-bottom: 15px;
+}
+.sale-info
+{
+    width: 100%;
+}
+.sale-info td
+{
+    border: #ccc solid thin;
+    text-align: center;
+    padding: 5px;
+}
+button:focus{
+    background: yellow !important;
+}
+select:focus{
+    background: yellow;
+}
+input:focus{
+    background: yellow !important;
+    box-shadow: 0 0 10px black;
+}
+.dropdown-toggle:focus{
+    background: yellow !important;
+}
+#hotkey
+{
+    margin: 15px;
+}
+#hotkey ul{
+    list-style-type: none;
+}
+.quickcontrol{
+    text-align: center;
+    padding: 5px;
+}
+#frmCustomer{
+    position: absolute;
+    top:300px;
+    background: #fff;
+    margin: 0 15px;
+    border: #4c4e65 thin solid;
+    width: 78%;
+    z-index: 1000;
+    padding-bottom: 10px;
+}
+.frmCustomerheader{
+    background: #4c4e65;
+    margin-bottom: 15px;
+}
+.frmCustomertitle{
+    padding:10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+#btnSaveCustomer
+{
+    background: #ffe751;
+}

@@ -1,0 +1,352 @@
+{
+    "1": {
+        "languagekey": "lang_text_pleasewait",
+        "vn": "Xin ch\u1edd",
+        "en": "Please wait",
+        "ru": "Please wait",
+        "kh": "Please wait",
+        "cn": "Please wait",
+        "fr": "Please wait",
+        "jp": "Please wait"
+    },
+    "2": {
+        "languagekey": "lang_text_submit",
+        "vn": "G\u1eedi",
+        "en": "Submit",
+        "ru": "Submit",
+        "kh": "Submit",
+        "cn": "Submit",
+        "fr": "Submit",
+        "jp": "Submit"
+    },
+    "3": {
+        "languagekey": "lang_text_save",
+        "vn": "L\u01b0u",
+        "en": "Save",
+        "ru": "Save",
+        "kh": "Save",
+        "cn": "Save",
+        "fr": "Save",
+        "jp": "Save"
+    },
+    "4": {
+        "languagekey": "lang_text_cancel",
+        "vn": "B\u1ecf qua",
+        "en": "Cancel",
+        "ru": "Cancel",
+        "kh": "Cancel",
+        "cn": "Cancel",
+        "fr": "Cancel",
+        "jp": "Cancel"
+    },
+    "5": {
+        "languagekey": "lang_text_save_success",
+        "vn": "C\u1eadp nh\u1eadt d\u1eef li\u1ec7u th\u00e0nh c\u00f4ng",
+        "en": "Data is updated",
+        "ru": "Data is updated",
+        "kh": "Data is updated",
+        "cn": "Data is updated",
+        "fr": "Data is updated",
+        "jp": "Data is updated"
+    },
+    "6": {
+        "languagekey": "lang_text_save_failed",
+        "vn": "C\u1eadp nh\u1eadt d\u1eef li\u1ec7u kh\u00f4ng th\u00e0nh c\u00f4ng",
+        "en": "Update data failed",
+        "ru": "Update data failed",
+        "kh": "Update data failed",
+        "cn": "Update data failed",
+        "fr": "Update data failed",
+        "jp": "Update data failed"
+    },
+    "7": {
+        "languagekey": "lang_text_notification",
+        "vn": "Th\u00f4ng b\u00e1o",
+        "en": "Notification",
+        "ru": "Notification",
+        "kh": "Notification",
+        "cn": "Notification",
+        "fr": "Notification",
+        "jp": "Notification"
+    },
+    "8": {
+        "languagekey": "lang_text_add",
+        "vn": "Th\u00eam",
+        "en": "Add",
+        "ru": "Add",
+        "kh": "Add",
+        "cn": "Add",
+        "fr": "Add",
+        "jp": "Add"
+    },
+    "9": {
+        "languagekey": "lang_text_edit",
+        "vn": "S\u1eeda",
+        "en": "Edit",
+        "ru": "Edit",
+        "kh": "Edit",
+        "cn": "Edit",
+        "fr": "Edit",
+        "jp": "Edit"
+    },
+    "10": {
+        "languagekey": "lang_text_delete",
+        "vn": "X\u00f3a",
+        "en": "Delete",
+        "ru": "Delete",
+        "kh": "Delete",
+        "cn": "Delete",
+        "fr": "Delete",
+        "jp": "Delete"
+    },
+    "11": {
+        "languagekey": "lang_text_update",
+        "vn": "C\u1eadp nh\u1eadt",
+        "en": "Update",
+        "ru": "Update",
+        "kh": "Update",
+        "cn": "Update",
+        "fr": "Update",
+        "jp": "Update"
+    },
+    "12": {
+        "languagekey": "lang_text_show",
+        "vn": "Hi\u1ec3n th\u1ecb",
+        "en": "Show",
+        "ru": "Show",
+        "kh": "Show",
+        "cn": "Show",
+        "fr": "Show",
+        "jp": "Show"
+    },
+    "13": {
+        "languagekey": "lang_text_hidden",
+        "vn": "T\u1ea1m \u1ea9n",
+        "en": "Hidden",
+        "ru": "Hidden",
+        "kh": "Hidden",
+        "cn": "Hidden",
+        "fr": "Hidden",
+        "jp": "Hidden"
+    },
+    "14": {
+        "languagekey": "lang_text_title",
+        "vn": "Ti\u00eau \u0111\u1ec1",
+        "en": "Title",
+        "ru": "Title",
+        "kh": "Title",
+        "cn": "Title",
+        "fr": "Title",
+        "jp": "Title"
+    },
+    "15": {
+        "languagekey": "lang_text_description",
+        "vn": "M\u00f4 t\u1ea3",
+        "en": "Description",
+        "ru": "Description",
+        "kh": "Description",
+        "cn": "Description",
+        "fr": "Description",
+        "jp": "Description"
+    },
+    "16": {
+        "languagekey": "text_meta_title",
+        "vn": "Ti\u00eau \u0111\u1ec1 (SEO)",
+        "en": "Title (SEO)",
+        "ru": "Title (SEO)",
+        "kh": "Title (SEO)",
+        "cn": "Title (SEO)",
+        "fr": "Title (SEO)",
+        "jp": "Title (SEO)"
+    },
+    "17": {
+        "languagekey": "text_meta_keyword",
+        "vn": "T\u1eeb kh\u00f3a (SEO)",
+        "en": "Keyword (SEO)",
+        "ru": "Keyword (SEO)",
+        "kh": "Keyword (SEO)",
+        "cn": "Keyword (SEO)",
+        "fr": "Keyword (SEO)",
+        "jp": "Keyword (SEO)"
+    },
+    "18": {
+        "languagekey": "text_meta_description",
+        "vn": "M\u00f4 t\u1ea3 (SEO)",
+        "en": "Description (SEO)",
+        "ru": "Description (SEO)",
+        "kh": "Description (SEO)",
+        "cn": "Description (SEO)",
+        "fr": "Description (SEO)",
+        "jp": "Description (SEO)"
+    },
+    "19": {
+        "languagekey": "lang_text_confirm_delete",
+        "vn": "B\u1ea1n c\u00f3 mu\u1ed1n x\u00f3a?",
+        "en": "Do you want to delete them?",
+        "ru": "Do you want to delete them?",
+        "kh": "Do you want to delete them?",
+        "cn": "Do you want to delete them?",
+        "fr": "Do you want to delete them?",
+        "jp": "Do you want to delete them?"
+    },
+    "20": {
+        "languagekey": "lang_text_delete_data",
+        "vn": "X\u00f3a d\u1eef li\u1ec7u",
+        "en": "Delete data",
+        "ru": "Delete data",
+        "kh": "Delete data",
+        "cn": "Delete data",
+        "fr": "Delete data",
+        "jp": "Delete data"
+    },
+    "21": {
+        "languagekey": "lang_text_delete",
+        "vn": "X\u00f3a",
+        "en": "Delete",
+        "ru": "Delete",
+        "kh": "Delete",
+        "cn": "Delete",
+        "fr": "Delete",
+        "jp": "Delete"
+    },
+    "22": {
+        "languagekey": "lang_text_editor",
+        "vn": "Bi\u00ean t\u1eadp",
+        "en": "Editor",
+        "ru": "Editor",
+        "kh": "Editor",
+        "cn": "Editor",
+        "fr": "Editor",
+        "jp": "Editor"
+    },
+    "23": {
+        "languagekey": "lang_text_info",
+        "vn": "Th\u00f4ng tin",
+        "en": "Information",
+        "ru": "Information",
+        "kh": "Information",
+        "cn": "Information",
+        "fr": "Information",
+        "jp": "Information"
+    },
+    "24": {
+        "languagekey": "lang_text_summary",
+        "vn": "T\u00f3m t\u1eaft",
+        "en": "Summary",
+        "ru": "Summary",
+        "kh": "Summary",
+        "cn": "Summary",
+        "fr": "Summary",
+        "jp": "Summary"
+    },
+    "25": {
+        "languagekey": "lang_text_seo_content",
+        "vn": "N\u1ed9i dung SEO",
+        "en": "SEO Content",
+        "ru": "SEO Content",
+        "kh": "SEO Content",
+        "cn": "SEO Content",
+        "fr": "SEO Content",
+        "jp": "SEO Content"
+    },
+    "26": {
+        "languagekey": "lang_text_publish",
+        "vn": "Xu\u1ea5t b\u1ea3n",
+        "en": "Publish",
+        "ru": "Publish",
+        "kh": "Publish",
+        "cn": "Publish",
+        "fr": "Publish",
+        "jp": "Publish"
+    },
+    "27": {
+        "languagekey": "lang_text_preview",
+        "vn": "Xem tr\u01b0\u1edbc",
+        "en": "Preview",
+        "ru": "Preview",
+        "kh": "Preview",
+        "cn": "Preview",
+        "fr": "Preview",
+        "jp": "Preview"
+    },
+    "28": {
+        "languagekey": "lang_text_category",
+        "vn": "Danh m\u1ee5c",
+        "en": "Category",
+        "ru": "Category",
+        "kh": "Category",
+        "cn": "Category",
+        "fr": "Category",
+        "jp": "Category"
+    },
+    "29": {
+        "languagekey": "lang_text_map",
+        "vn": "B\u1ea3n \u0111\u1ed3",
+        "en": "Location",
+        "ru": "Location",
+        "kh": "Location",
+        "cn": "Location",
+        "fr": "Location",
+        "jp": "Location"
+    },
+    "30": {
+        "languagekey": "lang_text_select_user_item",
+        "vn": "Vui l\u00f2ng ch\u1ecdn \u00edt nh\u1ea5t m\u1ed9t t\u00e0i kho\u1ea3n",
+        "en": "Please select one user as least",
+        "ru": "Please select one user as least",
+        "kh": "Please select one user as least",
+        "cn": "Please select one user as least",
+        "fr": "Please select one user as least",
+        "jp": "Please select one user as least"
+    },
+    "31": {
+        "languagekey": "lang_text_search",
+        "vn": "T\u00ecm ki\u1ebfm",
+        "en": "Search",
+        "ru": "Search",
+        "kh": "Search",
+        "cn": "Search",
+        "fr": "Search",
+        "jp": "Search"
+    },
+    "32": {
+        "languagekey": "lang_text_all",
+        "vn": "T\u1ea5t c\u1ea3",
+        "en": "All",
+        "ru": "All",
+        "kh": "All",
+        "cn": "All",
+        "fr": "All",
+        "jp": "All"
+    },
+    "33": {
+        "languagekey": "lang_text_view_all",
+        "vn": "Xem t\u1ea5t c\u1ea3",
+        "en": "View All",
+        "ru": "View All",
+        "kh": "View All",
+        "cn": "View All",
+        "fr": "View All",
+        "jp": "View All"
+    },
+    "34": {
+        "languagekey": "lang_text_close",
+        "vn": "\u0110\u00f3ng",
+        "en": "Close",
+        "ru": "Close",
+        "kh": "Close",
+        "cn": "Close",
+        "fr": "Close",
+        "jp": "Close"
+    },
+    "35": {
+        "languagekey": "lang_text_add_image",
+        "vn": "Ch\u00e8n h\u00ecnh",
+        "en": "Add Image",
+        "ru": "Add Image",
+        "kh": "Add Image",
+        "cn": "Add Image",
+        "fr": "Add Image",
+        "jp": "Add Image"
+    }
+}
