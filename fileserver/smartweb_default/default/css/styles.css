@@ -20508,7 +20508,7 @@ input[type=file] {
     font-size: 16px
 }
 .input-sm {
-    height: 30px;
+    height: 26px;
     font-size: 12px
 }
 .has-feedback label~.form-control-feedback {

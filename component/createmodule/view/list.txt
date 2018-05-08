@@ -3,7 +3,7 @@
     <div id="module-path" class="pull-right">Home / {ObjName} List</div>
     <div class="block">
         <div class="row">
-            <form id="frm{ObjName}Search" class="form-horizontal frmSearch">
+            <form id="frm{Obj}Search" class="form-horizontal frmSearch">
                 <div class="col-md-12">
                     <div>
                         <table>
@@ -19,7 +19,7 @@
                                     <input type="text" class="form-control input-sm" id="searchvalue" name="searchvalue">
                                 </td>
                                 <td>
-                                    <button id="btnSearch" class="btn btn-sm btn-default" type="button" onclick="{Prefix}{ObjName}.search()"><span class="fa fa-search"></span></button>
+                                    <button id="btnSearch" class="btn btn-sm btn-default" type="button" onclick="{Prefix}{Obj}.search()"><span class="fa fa-search"></span></button>
                                 </td>
                                 <td>
                                     #Found: <span id="showtotal"></span>

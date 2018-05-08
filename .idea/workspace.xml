@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d514d31-d7fa-4e7e-a1ff-4a70a23fe765" name="Default" comment="" />
+    <list default="true" id="1d514d31-d7fa-4e7e-a1ff-4a70a23fe765" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/component/createmodule/view/list.txt" afterPath="$PROJECT_DIR$/component/createmodule/view/list.txt" />
+      <change beforePath="$PROJECT_DIR$/fileserver/smartweb_default/default/css/styles.css" afterPath="$PROJECT_DIR$/fileserver/smartweb_default/default/css/styles.css" />
+      <change beforePath="$PROJECT_DIR$/logs/log.txt" afterPath="$PROJECT_DIR$/logs/log.txt" />
+      <change beforePath="$PROJECT_DIR$/smartcore/controller/common/dashboard.php" afterPath="$PROJECT_DIR$/smartcore/controller/common/dashboard.php" />
+      <change beforePath="$PROJECT_DIR$/smartcore/controller/core/createmodule.php" afterPath="$PROJECT_DIR$/smartcore/controller/core/createmodule.php" />
+      <change beforePath="$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl" afterPath="$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl" />
+      <change beforePath="$PROJECT_DIR$/smartcore/template/default/view/core/invoice_table.tpl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/smartcore/template/default/view/core/invoice_table.tpl___jb_tmp___" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/smartcore/template/default/view/module/card_form.tpl" afterPath="$PROJECT_DIR$/smartcore/template/default/view/module/card_form.tpl" />
+      <change beforePath="$PROJECT_DIR$/smartcore/template/default/view/module/card_table.tpl" afterPath="$PROJECT_DIR$/smartcore/template/default/view/module/card_table.tpl" />
+      <change beforePath="$PROJECT_DIR$/system/library/document.php" afterPath="$PROJECT_DIR$/system/library/document.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,108 +24,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/header.tpl">
+      <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartcore/controller/common/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="408">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="location.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartcore/model/module/location.php">
+      <file leaf-file-name="document.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/library/document.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="230">
+              <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
               <folding>
-                <marker date="1523602821708" expanded="true" signature="362:439" ph="Select `loca... location" />
-                <marker date="1523602821708" expanded="true" signature="651:722" ph="Select count... location" />
-                <marker date="1523602821708" expanded="true" signature="902:956" ph="Select * fro... location" />
+                <marker date="1525751199984" expanded="true" signature="6786:6834" ph="Select * fro... soft_setting" />
+                <marker date="1525751199984" expanded="true" signature="7312:7389" ph="Select `card... card" />
+                <marker date="1525751199984" expanded="true" signature="7545:7638" ph="Select `user... usertype" />
+                <marker date="1525751199984" expanded="true" signature="7830:7913" ph="Select `user... user_module" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartcore/controller/module/card.php">
+      <file leaf-file-name="card_form.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/card_form.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+            <state relative-caret-position="655">
+              <caret line="335" column="16" lean-forward="false" selection-start-line="335" selection-start-column="16" selection-end-line="335" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card_setaccount.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/card_setaccount.tpl">
+      <file leaf-file-name="card_table.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/card_table.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartcore/controller/common/header.php">
+      <file leaf-file-name="createmodule.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/smartcore/controller/core/createmodule.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartcore/controller/core/profile.php">
+      <file leaf-file-name="sitebar.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+              <caret line="7" column="95" lean-forward="false" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="95" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainmenu.tpl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/mainmenu.tpl">
+      <file leaf-file-name="card_list.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/card_list.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-              <folding>
-                <element signature="e#262#268#0#HTML" expanded="true" />
-                <element signature="e#382#388#1#HTML" expanded="true" />
-                <element signature="e#647#653#0#HTML" expanded="true" />
-                <element signature="e#895#901#1#HTML" expanded="true" />
-                <element signature="e#1163#1169#1#HTML" expanded="true" />
-                <element signature="e#1441#1447#0#HTML" expanded="true" />
-                <element signature="e#1701#1707#1#HTML" expanded="true" />
-                <element signature="e#1994#2000#0#HTML" expanded="true" />
-                <element signature="e#2297#2303#1#HTML" expanded="true" />
-                <element signature="e#2560#2566#0#HTML" expanded="true" />
-                <element signature="e#2793#2799#0#HTML" expanded="true" />
-                <element signature="e#3040#3046#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/library/user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="200" column="33" lean-forward="false" selection-start-line="200" selection-start-column="20" selection-end-line="200" selection-end-column="33" />
-              <folding>
-                <marker date="1516899773310" expanded="true" signature="1240:1333" ph="SELECT * FRO... user" />
-                <marker date="1516899773310" expanded="true" signature="1715:1829" ph="SELECT * FRO... card" />
-                <marker date="1516899773310" expanded="true" signature="3548:3703" ph="SELECT * FRO... user" />
-                <marker date="1516899773310" expanded="true" signature="4535:4578" ph="Select * fro... site" />
-                <marker date="1516899773310" expanded="true" signature="4674:4788" ph="SELECT * FRO... card" />
-                <marker date="1516899773310" expanded="true" signature="5430:5580" ph="SELECT * FRO... user" />
-                <marker date="1516899773310" expanded="true" signature="5967:6081" ph="SELECT * FRO... card" />
-                <marker date="1516899773310" expanded="true" signature="6257:6411" ph="UPDATE user... " />
-              </folding>
+            <state relative-caret-position="184">
+              <caret line="334" column="82" lean-forward="false" selection-start-line="334" selection-start-column="80" selection-end-line="334" selection-end-column="82" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,22 +112,24 @@
       <find>app-header-search</find>
       <find>module/store</find>
       <find>store</find>
+      <find>la</find>
+      <find>liabilities</find>
     </findStrings>
     <dirStrings>
       <dir>D:\xampp\htdocs\TradingPorfolio\fileserver\smartweb_default\default\css</dir>
       <dir>D:\xampp\htdocs\TradingPorfolio</dir>
     </dirStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/fileserver/eimagick.php" />
-        <option value="$PROJECT_DIR$/fileserver/smartweb_default/default/css/styles.css" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/common/dashboard.tpl" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/module/cash_list.tpl" />
-        <option value="$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl" />
-        <option value="$PROJECT_DIR$/smartcore/template/default/view/module/card_list.tpl" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/page/base.tpl" />
         <option value="$PROJECT_DIR$/dbconfig.php" />
         <option value="$PROJECT_DIR$/rawdata/dbconfig.php" />
@@ -156,6 +140,15 @@
         <option value="$PROJECT_DIR$/smartcore/controller/common/header.php" />
         <option value="$PROJECT_DIR$/smartcore/controller/core/profile.php" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/common/mainmenu.tpl" />
+        <option value="$PROJECT_DIR$/smartcore/controller/common/dashboard.php" />
+        <option value="$PROJECT_DIR$/system/library/document.php" />
+        <option value="$PROJECT_DIR$/smartcore/template/default/view/module/card_form.tpl" />
+        <option value="$PROJECT_DIR$/smartcore/template/default/view/module/card_list.tpl" />
+        <option value="$PROJECT_DIR$/smartcore/template/default/view/module/card_table.tpl" />
+        <option value="$PROJECT_DIR$/smartcore/controller/core/createmodule.php" />
+        <option value="$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl" />
+        <option value="$PROJECT_DIR$/component/createmodule/view/list.txt" />
+        <option value="$PROJECT_DIR$/fileserver/smartweb_default/default/css/styles.css" />
       </list>
     </option>
   </component>
@@ -172,6 +165,7 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -187,8 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,79 +191,46 @@
             <path>
               <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="rawdata" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="component" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fileserver" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fileserver" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="smartweb_default" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fileserver" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="smartweb_default" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fileserver" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="smartweb_default" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../squarelife" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -306,24 +265,24 @@
       <option name="presentableId" value="Default" />
       <updated>1525613769292</updated>
       <workItem from="1525613771195" duration="2467000" />
-      <workItem from="1525660472392" duration="7521000" />
+      <workItem from="1525660472392" duration="8724000" />
+      <workItem from="1525686511401" duration="62000" />
+      <workItem from="1525750447393" duration="2978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9988000" />
+    <option name="totallyTimeSpent" value="14231000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -334,6 +293,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -348,11 +308,128 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/smartcore/controller/common/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/controller/core/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/library/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3400">
+          <caret line="200" column="33" lean-forward="false" selection-start-line="200" selection-start-column="20" selection-end-line="200" selection-end-column="33" />
+          <folding>
+            <marker date="1516899773310" expanded="true" signature="1240:1333" ph="SELECT * FRO... user" />
+            <marker date="1516899773310" expanded="true" signature="1715:1829" ph="SELECT * FRO... card" />
+            <marker date="1516899773310" expanded="true" signature="3548:3703" ph="SELECT * FRO... user" />
+            <marker date="1516899773310" expanded="true" signature="4535:4578" ph="Select * fro... site" />
+            <marker date="1516899773310" expanded="true" signature="4674:4788" ph="SELECT * FRO... card" />
+            <marker date="1516899773310" expanded="true" signature="5430:5580" ph="SELECT * FRO... user" />
+            <marker date="1516899773310" expanded="true" signature="5967:6081" ph="SELECT * FRO... card" />
+            <marker date="1516899773310" expanded="true" signature="6257:6411" ph="UPDATE user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/mainmenu.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/model/module/location.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523602821708" expanded="true" signature="362:439" ph="Select `loca... location" />
+            <marker date="1523602821708" expanded="true" signature="651:722" ph="Select count... location" />
+            <marker date="1523602821708" expanded="true" signature="902:956" ph="Select * fro... location" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/controller/module/card.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/card_setaccount.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3145">
+          <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/controller/common/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/controller/core/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/mainmenu.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/library/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3400">
+          <caret line="200" column="33" lean-forward="false" selection-start-line="200" selection-start-column="20" selection-end-line="200" selection-end-column="33" />
+          <folding>
+            <marker date="1516899773310" expanded="true" signature="1240:1333" ph="SELECT * FRO... user" />
+            <marker date="1516899773310" expanded="true" signature="1715:1829" ph="SELECT * FRO... card" />
+            <marker date="1516899773310" expanded="true" signature="3548:3703" ph="SELECT * FRO... user" />
+            <marker date="1516899773310" expanded="true" signature="4535:4578" ph="Select * fro... site" />
+            <marker date="1516899773310" expanded="true" signature="4674:4788" ph="SELECT * FRO... card" />
+            <marker date="1516899773310" expanded="true" signature="5430:5580" ph="SELECT * FRO... user" />
+            <marker date="1516899773310" expanded="true" signature="5967:6081" ph="SELECT * FRO... card" />
+            <marker date="1516899773310" expanded="true" signature="6257:6411" ph="UPDATE user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/page/base.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -365,7 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -387,7 +463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="26304" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="26322" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -426,37 +501,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fileserver/smartweb_default/default/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="19306" column="45" lean-forward="false" selection-start-line="19306" selection-start-column="45" selection-end-line="19306" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/cash_list.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/card_list.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/cash_list.tpl" />
     <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/dashboard.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -464,15 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="24" column="142" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="142" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="287" lean-forward="false" selection-start-line="0" selection-start-column="287" selection-end-line="0" selection-end-column="287" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -480,7 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -488,7 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -496,7 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -504,13 +541,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/library/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="3400">
           <caret line="200" column="33" lean-forward="false" selection-start-line="200" selection-start-column="20" selection-end-line="200" selection-end-column="33" />
           <folding>
             <marker date="1516899773310" expanded="true" signature="1240:1333" ph="SELECT * FRO... user" />
@@ -525,22 +561,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/model/web/data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/model/web/data.php" />
     <entry file="file://$PROJECT_DIR$/smartcore/model/module/location.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -563,7 +584,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/card_setaccount.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
+        <state relative-caret-position="3145">
           <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding />
         </state>
@@ -571,7 +592,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartcore/controller/common/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="374">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
@@ -579,30 +600,110 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartcore/controller/core/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="425">
           <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/mainmenu.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="17">
           <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/controller/common/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/library/document.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
           <folding>
-            <element signature="e#262#268#0#HTML" expanded="true" />
-            <element signature="e#382#388#1#HTML" expanded="true" />
-            <element signature="e#647#653#0#HTML" expanded="true" />
-            <element signature="e#895#901#1#HTML" expanded="true" />
-            <element signature="e#1163#1169#1#HTML" expanded="true" />
-            <element signature="e#1441#1447#0#HTML" expanded="true" />
-            <element signature="e#1701#1707#1#HTML" expanded="true" />
-            <element signature="e#1994#2000#0#HTML" expanded="true" />
-            <element signature="e#2297#2303#1#HTML" expanded="true" />
-            <element signature="e#2560#2566#0#HTML" expanded="true" />
-            <element signature="e#2793#2799#0#HTML" expanded="true" />
-            <element signature="e#3040#3046#0#HTML" expanded="true" />
+            <marker date="1525751199984" expanded="true" signature="6786:6834" ph="Select * fro... soft_setting" />
+            <marker date="1525751199984" expanded="true" signature="7312:7389" ph="Select `card... card" />
+            <marker date="1525751199984" expanded="true" signature="7545:7638" ph="Select `user... usertype" />
+            <marker date="1525751199984" expanded="true" signature="7830:7913" ph="Select `user... user_module" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/card_form.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="335" column="16" lean-forward="false" selection-start-line="335" selection-start-column="16" selection-end-line="335" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/card_list.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="334" column="82" lean-forward="false" selection-start-line="334" selection-start-column="80" selection-end-line="334" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/card_table.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="95" lean-forward="false" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/createmodule/view/list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fileserver/smartweb_default/default/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="20519" column="21" lean-forward="true" selection-start-line="20519" selection-start-column="21" selection-end-line="20519" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/item_list.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/controller/core/createmodule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

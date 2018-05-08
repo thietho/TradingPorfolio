@@ -20,20 +20,16 @@ class ControllerCoreCreatemodule extends Controller
     public function index()
     {
         $this->data['output'] = '';
-        $this->obj = 'Module';
-        $this->objname = 'Module';
-        $this->path = 'core/module';
-        $this->table = 'user_module';
-        $this->prefix = 'elife_';
+        $this->obj = 'Item';
+        $this->objname = 'Chứng Khoán';
+        $this->path = 'module/item';
+        $this->table = 'item';
+        $this->prefix = 'trading_';
         $this->col = array(
-            'moduleid'=> 'Module Id',
-            'modulename'=> 'Module Name',
-            'modulepath'=> 'Module Path',
-            'moduleparent'=> 'Parent',
-            'moduleicon'=> 'Icon',
-            'position'=> 'Position'
+            'symbol'=> 'Mã chứng khoáng',
+            'name'=> 'Tên chứng khoáng'
         );
-        $this->maincol = 'modulename';
+        $this->maincol = 'symbol';
         $this->createModel();
         $this->createController();
         $this->createView();

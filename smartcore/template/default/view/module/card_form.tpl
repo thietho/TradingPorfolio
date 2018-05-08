@@ -155,39 +155,7 @@
                     <button type="button" class="btn btn-sm btn-success" id="btnAddCardLocation"><span class="fa fa-plus"></span>Thêm địa chỉ giao hàng</button>
                     <input type="hidden" name="listlocationremove" id="listlocationremove">
                 </div>
-                <div class="col-md-12">
-                    <h3>Cung cấp sản phẩm</h3>
-                    <table>
-                        <tr>
-                            <td>
-                                <input type="text" class="form-control input-sm" id="txt_productcode" style="width: 300px" placeholder="Enter <<?php echo $text_item_number?>> or <<?php echo $text_barcode?>>" autocomplete="off">
-                                <input type="hidden" id="productcode">
-                            </td>
-                            <td>
-                                <input type="text" id="import" class="form-control input-sm number" placeholder="Giá nhập" style="width: 200px">
-                            </td>
-                            <td><label id="lbl_unit"></label></td>
-                            <td><button type="button" class="btn btn-sm btn-success" id="btnAddCardProduct"><span class="fa fa-plus"></span></button></td>
-                        </tr>
-                    </table>
 
-
-
-                    <table class="table table-striped table-bordered">
-                        <tr>
-                            <th><?php echo $text_product_code?></th>
-                            <th><?php echo $text_product?></th>
-                            <th>Giá nhập</th>
-                            <th>Đơn vị</th>
-                            <th></th>
-                        </tr>
-                        <tbody id="productlist">
-
-                        </tbody>
-                    </table>
-
-                    <input type="hidden" name="listproductremove" id="listproductremove">
-                </div>
 
             </form>
         </div>
@@ -242,31 +210,7 @@
     </tbody>
 
 </table>
-<table id="" style="display: none">
-    <tbody id="cardproducttemplate">
-    <tr id="row{index}">
-        <td>
-            <label id="lblproductcode-{index}"></label>
-            <input type="hidden" name="product[id][{index}]" id="id-{index}">
-            <input type="hidden" name="product[productcode][{index}]" id="productcode-{index}">
-        </td>
-        <td>
-            <label id="lblproductname-{index}"></label>
-        </td>
-        <td>
-            <input type="text" class="form-control input-sm number" name="product[import][{index}]" id="import-{index}" placeholder="Gía nhập">
-        </td>
-        <td>
-            <label id="lblunit-{index}"></label>
-            <input type="hidden" name="product[unit][{index}]" id="unit-{index}">
-        </td>
-        <td>
-            <button type="button" class="btnRemoveProduct btn btn-danger btn-sm" index="{index}" onclick="card.removeRow({index})"><span class="fa fa-trash"></span></button>
-        </td>
-    </tr>
-    </tbody>
 
-</table>
 <script type="application/javascript" defer>
 
 function selectProduct(item) {
@@ -277,25 +221,7 @@ function selectProduct(item) {
         $('#frmCard #import').focus();
     });
 }
-$('#btnAddCardProduct').click(function () {
-    if($('#frmCard #productcode').val() != ''){
-        card.addProductRow(card.index);
-        $('#frmCard #lblproductcode-'+card.index).html($('#frmCard #productcode').val());
-        $('#frmCard #productcode-'+card.index).val($('#frmCard #productcode').val());
-        $('#frmCard #lblproductname-'+card.index).html($('#frmCard #txt_productcode').val());
-        $('#frmCard #import-'+card.index).val($('#frmCard #import').val());
-        $('#frmCard #lblunit-'+card.index).html($('#frmCard #lbl_unit').html());
-        $('#frmCard #unit-'+card.index).val($('#frmCard #lbl_unit').html());
-        numberReady();
-        card.index++;
-        $('#frmCard #productcode').val('');
-        $('#frmCard #txt_productcode').val('');
-        $('#frmCard #import').val('')
-        $('#frmCard #lbl_unit').html('');
-        $('#txt_productcode').focus();
-    }
 
-});
 $('#frmCard #import').keyup(function (e) {
     if(e.keyCode == 13){
         $('#btnAddCardProduct').click();

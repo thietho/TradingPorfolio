@@ -6,10 +6,8 @@
                 <th><?php echo $text_no?></th>
                 <th class="sort-default" sortcol="fullname" cardtype="<?php echo $_GET['cardtype']?>">Name</th>
                 <th class="sort-default" sortcol="cardid" cardtype="<?php echo $_GET['cardtype']?>"><?php echo $text_card_id?></th>
-                <th class="sort-default"><?php echo $text_user_name?></th>
+                <th><?php echo $text_user_name?></th>
                 <th class="sort-default" sortcol="telephone"cardtype="<?php echo $_GET['cardtype']?>"><?php echo $text_phone?></th>
-                <th><?php echo $text_type?></th>
-                <th>Công nợ hiện tại</th>
 				
                 <th class="tool-title-2"><?php echo $text_tool?></th>
             </tr>
@@ -28,9 +26,6 @@
                     <?php } ?>
                 </td>
 				<td><?php echo $card['telephone'] ?></td>
-				<td><?php echo $this->document->cardtype[$card['cardtype']] ?></td>
-
-                <td class="number liabilities" cardid="<?php echo $card['cardid']?>"></td>
 				
                 <td class="text-center">
                     <?php if($_GET['type'] == 'popup'){ ?>
@@ -179,13 +174,7 @@
 <script type="application/javascript">
     $(document).ready(function(){
         elife_Card.showTotal("<?php echo $this->string->numberFormate($total)?> items");
-        $('.liabilities').each(function(){
-            var eid = $(this);
-            $.getJSON("?route=module/card/getLiabilities&cardid="+$(this).attr('cardid'),function(data){
-                var str = currencyFormate(data.debit + data.credit + data.mustpay);
-                eid.html(str);
-            });
-        });
+
     });
     var sortcol = "<?php echo $_GET['sortcol']?>";
     var sorttype = "<?php echo $_GET['sorttype']?>";

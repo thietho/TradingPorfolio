@@ -39,18 +39,10 @@ final class Document
         'pending' => 'Chờ duyệt',
         'approved' => 'Đã duyệt'
     );
-    public $invoicetype = array(
-        'income' => 'Income',
-        'expense' => 'Expense'
-    );
-    public $methodtype = array(
-        'cash' => 'Tiền mặt',
-        'bank' => 'Chuyển khoản',
-        'debit' => 'Tạm ứng'
-    );
+
     public $cardtype = array(
         'customer' => 'Customer',
-        'supplier' => 'Supplier',
+        'company' => 'Company',
         'staff' => 'Staff',
         'other' => 'Other'
     );
@@ -59,45 +51,12 @@ final class Document
         'complete' => 'Đã xử lý xong'
     );
 
-    public $importtype = array(
-        'IPO' => 'Purchase Order',
-        'IPC' => 'Import Processing',
-        'IIN' => 'Import Internal',
-        'IRO' => 'Import Return Orders',
-    );
-    public $exporttype = array(
-        'EIN' => 'Export Internal',
-        'EPC' => 'Export Processing',
-        'ERO' => 'Export return orders',
-        'EDE' => 'Export Destroy',
-    );
-    public $saletype = array(
-        'ESA' => 'Sale',
-        'SAS' => 'Sale Services'
-    );
-    public $accounttype = array(
-        'debit' => 'Debit',
-        'credit' => 'Cretid'
-    );
 
-    public $tabletype = array(
-        'normal' => 'Normal',
-        'vip' => 'VIP'
-    );
     public $tablelocation = array(
         'LA' => 'Location A',
         'LB' => 'Location B'
     );
-    public $servicestatus = array(
-        'active' => 'Active',
-        'suspend' => 'Suspend',
-        'delete' => 'Delete'
-    );
-    public $depreciationtype = array(
-        'no' => 'No',
-        'target' => 'Straight-Line',
-        'percent' => 'Declining-Balance'
-    );
+
     public function __construct()
     {
         $this->config = Registry::get('config');
@@ -298,13 +257,7 @@ final class Document
 									where cardid ='" . $cardid . "' ");
         return $query->row[$name];
     }
-    public function getStatus($statuscode,$name = 'statusname')
-    {
-        $query = $this->db->query("Select `orderstatus`.*
-									from `orderstatus`
-									where statuscode ='" . $statuscode . "' ");
-        return $query->row[$name];
-    }
+
     public function getUserType($usertypeid,$name = 'usertypename')
     {
         $query = $this->db->query("Select `usertype`.*
@@ -312,78 +265,7 @@ final class Document
 									where usertypeid ='" . $usertypeid . "' ");
         return $query->row[$name];
     }
-    public function getTax($taxcode,$name = 'taxname')
-    {
-        $query = $this->db->query("Select `soft_tax`.*
-									from `soft_tax`
-									where taxcode ='" . $taxcode . "' ");
-        return $query->row[$name];
-    }
-    
-    public function getUnit($unitcode,$name = 'unitname')
-    {
-        $query = $this->db->query("Select `soft_unit`.*
-									from `soft_unit`
-									where unitcode ='" . $unitcode . "' ");
-        return $query->row[$name];
-    }
-    public function getLocation($id,$name = 'locationname')
-    {
-        $query = $this->db->query("Select `location`.*
-									from `location`
-									where id ='" . $id . "' ");
-        return $query->row[$name];
-    }
-    public function getAccount($accountid,$name = 'accountname',$languageid = '')
-    {
-        if($languageid == '')
-            $languageid = $this->config->get('config_languageid');
-        $query = $this->db->query("Select `soft_accounts`.*
-									from `soft_accounts`
-									where accountid ='" . $accountid . "' AND languageid = '".$languageid."'");
-        return $query->row[$name];
-    }
-    public function getProduct($productcode,$name = 'model')
-    {
-        $query = $this->db->query("Select `product`.*
-									from `product`
-									where productcode ='" . $productcode . "'");
-        return $query->row[$name];
-    }
-    public function getProductDes($productcode,$name = 'name',$languageid = '')
-    {
-        if($languageid == '')
-            $languageid = $this->config->get('config_languageid');
-        $query = $this->db->query("Select `product_description`.*
-									from `product_description`
-									where productcode ='" . $productcode . "' AND languageid = '".$languageid."'");
-        return $query->row[$name];
-    }
-    public function getPaymentmethod($paymentmethodcode,$name = 'paymentmethod',$languageid = '')
-    {
-        if($languageid == '')
-            $languageid = $this->config->get('config_languageid');
-        $query = $this->db->query("Select `soft_paymentmethod`.*
-									from `soft_paymentmethod`
-									where paymentmethodcode ='" . $paymentmethodcode . "' AND languageid = '".$languageid."'");
-        return $query->row[$name];
-    }
-    public function getCategory($categoryid,$name = 'categoryname',$languageid = '')
-    {
-        if($languageid == '')
-            $languageid = $this->config->get('config_languageid');
-        $query = $this->db->query("Select `category`.*
-									from `category`
-									where categoryid ='" . $categoryid . "' AND languageid = '".$languageid."'");
-        return $query->row[$name];
-    }
-    public function getFixedassetType($id,$name = 'fixedassettype')
-    {
-        $query = $this->db->query("Select `soft_fixedassettype`.*
-									from `soft_fixedassettype`
-									where id ='" . $id . "'");
-        return $query->row[$name];
-    }
+
     public function getModule($id,$name = 'modulename')
     {
         if($id == 0)
@@ -392,51 +274,5 @@ final class Document
 									from `user_module`
 									where id ='" . $id . "' ");
         return $query->row[$name];
-    }
-    public function getOrderType($ordertype)
-    {
-        if($ordertype == "CHK")
-            return "Check Stock";
-        $name = $this->importtype[$ordertype];
-        if($name != '')
-            return $name;
-        $name = $this->exporttype[$ordertype];
-        if($name != '')
-            return $name;
-        $name = $this->saletype[$ordertype];
-        if($name != '')
-            return $name;
-    }
-    public function calEndDate($startdate,$qty,$unitcode)
-    {
-        if($unitcode != 'month')
-        {
-            $unitex = $this->getUnit($unitcode,'unitex');
-            if($unitex != 'month')
-                return '';
-            else
-            {
-                $exchange = $this->getUnit($unitcode,'exchange');
-                $qty = $qty * $exchange;
-
-            }
-        }
-        return $this->date->addmonth($startdate,$qty);
-    }
-    public function getDepreciationStraightLine($price,$nummonth,$targetprice,$targetmonth){
-        $hprice = $price - $targetprice;
-        if($nummonth >= $targetmonth){
-            return $targetprice;
-        }else{
-            $blockamount = $hprice/$targetmonth;
-            return $price - $blockamount*$nummonth;
-        }
-    }
-    public function getDepreciationDecliningBalance($price,$nummonth,$rate){
-        $newprice = $price;
-        for($i=1;$i<=$nummonth;$i++){
-            $newprice -= $newprice*$rate/100;
-        }
-        return $newprice;
     }
 }
