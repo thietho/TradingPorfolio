@@ -20,16 +20,22 @@ class ControllerCoreCreatemodule extends Controller
     public function index()
     {
         $this->data['output'] = '';
-        $this->obj = 'Item';
-        $this->objname = 'Chứng Khoán';
-        $this->path = 'module/item';
-        $this->table = 'item';
+        $this->obj = 'AccountStock';
+        $this->objname = 'Tài khoản chứng khoán';
+        $this->path = 'module/accountstock';
+        $this->table = 'accountstock';
         $this->prefix = 'trading_';
         $this->col = array(
-            'symbol'=> 'Mã chứng khoáng',
-            'name'=> 'Tên chứng khoáng'
+            'accountid'=> 'Tài khoản',
+            'openat'=> 'Mở tại',
+            'buyfee'=> 'Phí mua',
+            'salefee'=> 'Phí bán',
+            'marginrate'=> 'Lãi xuất margin',
+            'cardid'=> 'Chủ tài khoản',
+            'status'=> 'Trạng thái',
+            'depositfee'=> 'Phí lưu ký ck',
         );
-        $this->maincol = 'symbol';
+        $this->maincol = 'accountid';
         $this->createModel();
         $this->createController();
         $this->createView();

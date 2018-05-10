@@ -1,6 +1,6 @@
 <!-- START PAGE CONTAINER -->
 <div class="container">
-    <div class="row">
+    <div class="row" style="height: 700px">
 
 
     </div>

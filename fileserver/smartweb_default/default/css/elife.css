@@ -109,3 +109,6 @@
 .dataitem{
     width: 80px;
 }
+.number{
+    text-align: right;
+}
