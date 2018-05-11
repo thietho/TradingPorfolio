@@ -21,12 +21,12 @@
                 <td class="text-center"><?php echo ++$index; ?></td>
                 <td><?php echo $accountstock['accountid'] ?></td>
 				<td><?php echo $accountstock['openat'] ?></td>
-				<td><?php echo $accountstock['buyfee'] ?></td>
-				<td><?php echo $accountstock['salefee'] ?></td>
-				<td><?php echo $accountstock['marginrate'] ?></td>
+				<td class="number"><?php echo $accountstock['buyfee'] ?></td>
+				<td class="number"><?php echo $accountstock['salefee'] ?></td>
+				<td class="number"><?php echo $accountstock['marginrate'] ?></td>
 				<td><?php echo $accountstock['cardid'] ?></td>
 				<td><?php echo $accountstock['status'] ?></td>
-				<td><?php echo $accountstock['depositfee'] ?></td>
+				<td class="number"><?php echo $this->string->numberFormate($accountstock['depositfee']) ?></td>
 				
                 <td class="text-center">
                     <?php if($_GET['type'] == 'popup'){ ?>

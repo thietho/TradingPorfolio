@@ -95,7 +95,7 @@ function formateNumber(num)
     }
     else
     {
-        var p = mod.substr(0,2);
+        var p = mod.substr(0,4);
         return divnum+"\."+p;
     }
 

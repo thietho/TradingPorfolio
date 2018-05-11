@@ -34,24 +34,28 @@
 					<div class="form-group">
 						<label class="col-md-3 control-label">Mở tại</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="openat" id="openat" placeholder="Mở tại"
-                                       value="<?php echo $item['openat'] ?>">
+							<select class="form-control input-sm" name="openat" id="openat">
+								<option value=""></option>
+								<?php foreach($companys as $card){ ?>
+								<option value="<?php echo $card['cardid']?>" <?php echo $card['cardid']==$item['openat']?'selected':''?>><?php echo $card['fullname']?></option>
+								<?php } ?>
+							</select>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Phí mua</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="buyfee" id="buyfee" placeholder="Phí mua"
-                                       value="<?php echo $item['buyfee'] ?>">
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control number" name="buyfee" id="buyfee" placeholder="Phí mua"  value="<?php echo $item['buyfee'] ?>">
+								<span class="input-group-addon">%</span>
+							</div>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Phí bán</label>
 						<div class="col-md-9">
 							<div class="input-group input-group-sm">
-								<input type="text" class="form-control number" placeholder="Phí bán" name="salefee" id="salefee" placeholder="Phí bán"  value="<?php echo $item['salefee'] ?>">
+								<input type="text" class="form-control number" name="salefee" id="salefee" placeholder="Phí bán"  value="<?php echo $item['salefee'] ?>">
 								<span class="input-group-addon">%</span>
 							</div>
 						</div>
@@ -61,33 +65,40 @@
 					<div class="form-group">
 						<label class="col-md-3 control-label">Lãi xuất margin</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="marginrate" id="marginrate" placeholder="Lãi xuất margin"
-                                       value="<?php echo $item['marginrate'] ?>">
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control number" name="marginrate" id="marginrate" placeholder="Lãi xuất margin"  value="<?php echo $item['marginrate'] ?>">
+								<span class="input-group-addon">%</span>
+							</div>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Chủ tài khoản</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="cardid" id="cardid" placeholder="Chủ tài khoản"
-                                       value="<?php echo $item['cardid'] ?>">
+							<select class="form-control input-sm" name="cardid" id="cardid">
+								<option value=""></option>
+								<?php foreach($customers as $card){ ?>
+								<option value="<?php echo $card['cardid']?>" <?php echo $card['cardid']==$item['cardid']?'selected':''?>><?php echo $card['fullname']?></option>
+								<?php } ?>
+							</select>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Trạng thái</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="status" id="status" placeholder="Trạng thái"
-                                       value="<?php echo $item['status'] ?>">
+							<select class="form-control input-sm" name="status" id="status">
+								<?php foreach($this->document->userStatus as $key => $val){ ?>
+								<option value="<?php echo $key?>" <?php echo $key==$item['status']?'selected':''?>><?php echo $val?></option>
+								<?php } ?>
+							</select>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Phí lưu ký ck</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="depositfee" id="depositfee" placeholder="Phí lưu ký ck"
-                                       value="<?php echo $item['depositfee'] ?>">
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control number" name="depositfee" id="depositfee" placeholder="Phí lưu ký ck"  value="<?php echo $item['depositfee'] ?>">
+								<span class="input-group-addon">/tháng/ck</span>
+							</div>
 						</div>
 					</div>
 					

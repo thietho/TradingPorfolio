@@ -3,6 +3,7 @@
 /**
  * Class ControllerModuleAccountstock
  * @property ModelModuleAccountstock model_module_accountstock
+ * @property ModelModuleCard model_module_card
  *
  */
 class ControllerModuleAccountstock extends Controller
@@ -13,6 +14,9 @@ class ControllerModuleAccountstock extends Controller
     function __construct()
     {
         $this->load->model("module/accountstock");
+        $this->load->model("module/card");
+        $this->data['customers'] = $this->model_module_card->getList(" AND cardtype like 'customer'");
+        $this->data['companys'] = $this->model_module_card->getList(" AND cardtype like 'company'");
     }
 
     public function index()
@@ -139,6 +143,10 @@ class ControllerModuleAccountstock extends Controller
     {
         $data = $this->request->post;
         if ($this->validate($data)) {
+            $data['buyfee'] = $this->string->toNumber($data['buyfee']);
+            $data['salefee'] = $this->string->toNumber($data['salefee']);
+            $data['marginrate'] = $this->string->toNumber($data['marginrate']);
+            $data['depositfee'] = $this->string->toNumber($data['depositfee']);
             $data['id'] = $this->model_module_accountstock->save($data);
             $data['errors'] = array();
             $data['errorstext'] = '';
