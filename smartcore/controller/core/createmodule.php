@@ -20,22 +20,37 @@ class ControllerCoreCreatemodule extends Controller
     public function index()
     {
         $this->data['output'] = '';
-        $this->obj = 'AccountStock';
-        $this->objname = 'Tài khoản chứng khoán';
-        $this->path = 'module/accountstock';
-        $this->table = 'accountstock';
+        $this->obj = 'Transaction';
+        $this->objname = 'Giao dịch';
+        $this->path = 'module/transaction';
+        $this->table = 'transaction';
         $this->prefix = 'trading_';
         $this->col = array(
+            'transactionid'=> 'Mã giao dịch',
             'accountid'=> 'Tài khoản',
-            'openat'=> 'Mở tại',
-            'buyfee'=> 'Phí mua',
-            'salefee'=> 'Phí bán',
-            'marginrate'=> 'Lãi xuất margin',
             'cardid'=> 'Chủ tài khoản',
-            'status'=> 'Trạng thái',
-            'depositfee'=> 'Phí lưu ký ck',
+            'transactiondate'=> 'Ngày giao dịch',
+            'receivemoneydate'=> 'Ngày nhận tiền(T+2)',
+            'receivestockdate'=> 'Ngày nhận ck(T+3)',
+            'symbol'=> 'Mã ck',
+            'name'=> 'Tên ck',
+            'type'=> 'Loại giao dịch',
+            'costofsale'=> 'Giá vốn',
+            'volume'=> 'Số lượng',
+            'price'=> 'Giá',
+            'fee'=> 'Phí giao dich',
+            'tax'=> 'Thuế',
+            'total'=> 'Số tiền giao dịch',
+            'profit'=> 'Lợi nhuận',
+            'notes'=> 'Ghi chú',
+            'createdate'=> 'Ngày tạo',
+            'createby'=> 'Tạo bởi',
+            'updatedate'=> 'Ngày cập nhật',
+            'updateby'=> 'Cập nhật bởi',
+            'deletedate'=> 'Ngày xóa',
+            'deleteby'=> 'Xóa bởi',
         );
-        $this->maincol = 'accountid';
+        $this->maincol = 'transactionid';
         $this->createModel();
         $this->createController();
         $this->createView();
