@@ -3,6 +3,8 @@
 /**
  * Class ControllerModuleTransaction
  * @property ModelModuleTransaction model_module_transaction
+ * @property ModelModuleAccountstock model_module_accountstock
+ * @property ModelModuleItem model_module_item
  *
  */
 class ControllerModuleTransaction extends Controller
@@ -13,6 +15,10 @@ class ControllerModuleTransaction extends Controller
     function __construct()
     {
         $this->load->model("module/transaction");
+        $this->load->model("module/accountstock");
+        $this->data['accountstocks'] = $this->model_module_accountstock->getList();
+        $this->load->model("module/item");
+        $this->data['itemcks'] = $this->model_module_item->getList();
     }
 
     public function index()
@@ -149,6 +155,8 @@ class ControllerModuleTransaction extends Controller
         $id = $this->request->get['id'];
         if ($id) {
             $this->data['item'] = $this->model_module_transaction->getItem($id);
+        }else{
+            $this->data['item']['transactiondate'] = $this->date->getToday();
         }
 
         $this->template = "module/transaction_form.tpl";
@@ -184,6 +192,18 @@ class ControllerModuleTransaction extends Controller
     {
         $data = $this->request->post;
         if ($this->validate($data)) {
+            if($data['transactionid'] == ''){
+                $data['transactionid'] = $this->model_module_transaction->createId($data['type']);
+            }
+            $data['cardid'] = $this->document->getAccountstock($data['accountid']);
+            $data['transactiondate'] = $this->date->formatViewDate($data['transactiondate']);
+            $data['volume'] = $this->string->toNumber($data['volume']);
+            $data['price'] = $this->string->toNumber($data['price']);
+            $data['fee'] = $this->string->toNumber($data['fee']);
+            $data['tax'] = $this->string->toNumber($data['tax']);
+            $data['total'] = $this->string->toNumber($data['total']);
+            $data['costofsale'] = $this->string->toNumber($data['costofsale']);
+            $data['profit'] = $this->string->toNumber($data['profit']);
             $data['id'] = $this->model_module_transaction->save($data);
             $data['errors'] = array();
             $data['errorstext'] = '';
@@ -203,36 +223,20 @@ class ControllerModuleTransaction extends Controller
     private function validate($data)
     {
         $this->errors = array();
-
-        if ("" == $data['transactionid']) {
-			$this->errors['transactionid'] = "Mã giao dịch not empty";
-		}
 		if ("" == $data['accountid']) {
 			$this->errors['accountid'] = "Tài khoản not empty";
 		}
-		if ("" == $data['cardid']) {
-			$this->errors['cardid'] = "Chủ tài khoản not empty";
-		}
+
 		if ("" == $data['transactiondate']) {
 			$this->errors['transactiondate'] = "Ngày giao dịch not empty";
 		}
-		if ("" == $data['receivemoneydate']) {
-			$this->errors['receivemoneydate'] = "Ngày nhận tiền(T+2) not empty";
-		}
-		if ("" == $data['receivestockdate']) {
-			$this->errors['receivestockdate'] = "Ngày nhận ck(T+3) not empty";
-		}
+
 		if ("" == $data['symbol']) {
 			$this->errors['symbol'] = "Mã ck not empty";
 		}
-		if ("" == $data['name']) {
-			$this->errors['name'] = "Tên ck not empty";
-		}
+
 		if ("" == $data['type']) {
 			$this->errors['type'] = "Loại giao dịch not empty";
-		}
-		if ("" == $data['costofsale']) {
-			$this->errors['costofsale'] = "Giá vốn not empty";
 		}
 		if ("" == $data['volume']) {
 			$this->errors['volume'] = "Số lượng not empty";
@@ -243,36 +247,7 @@ class ControllerModuleTransaction extends Controller
 		if ("" == $data['fee']) {
 			$this->errors['fee'] = "Phí giao dich not empty";
 		}
-		if ("" == $data['tax']) {
-			$this->errors['tax'] = "Thuế not empty";
-		}
-		if ("" == $data['total']) {
-			$this->errors['total'] = "Số tiền giao dịch not empty";
-		}
-		if ("" == $data['profit']) {
-			$this->errors['profit'] = "Lợi nhuận not empty";
-		}
-		if ("" == $data['notes']) {
-			$this->errors['notes'] = "Ghi chú not empty";
-		}
-		if ("" == $data['createdate']) {
-			$this->errors['createdate'] = "Ngày tạo not empty";
-		}
-		if ("" == $data['createby']) {
-			$this->errors['createby'] = "Tạo bởi not empty";
-		}
-		if ("" == $data['updatedate']) {
-			$this->errors['updatedate'] = "Ngày cập nhật not empty";
-		}
-		if ("" == $data['updateby']) {
-			$this->errors['updateby'] = "Cập nhật bởi not empty";
-		}
-		if ("" == $data['deletedate']) {
-			$this->errors['deletedate'] = "Ngày xóa not empty";
-		}
-		if ("" == $data['deleteby']) {
-			$this->errors['deleteby'] = "Xóa bởi not empty";
-		}
+
 		
 
         if (count($this->errors) > 0) {

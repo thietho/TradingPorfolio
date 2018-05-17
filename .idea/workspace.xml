@@ -4,8 +4,11 @@
     <list default="true" id="1d514d31-d7fa-4e7e-a1ff-4a70a23fe765" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/logs/log.txt" afterPath="$PROJECT_DIR$/logs/log.txt" />
-      <change beforePath="$PROJECT_DIR$/smartcore/controller/core/createmodule.php" afterPath="$PROJECT_DIR$/smartcore/controller/core/createmodule.php" />
-      <change beforePath="$PROJECT_DIR$/smartcore_setting/default/cachedb/cache.Language_getDataLanguage_vn.1526218740" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/smartcore/controller/module/transaction.php" afterPath="$PROJECT_DIR$/smartcore/controller/module/transaction.php" />
+      <change beforePath="$PROJECT_DIR$/smartcore/model/module/transaction.php" afterPath="$PROJECT_DIR$/smartcore/model/module/transaction.php" />
+      <change beforePath="$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl" afterPath="$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl" />
+      <change beforePath="$PROJECT_DIR$/smartcore/template/default/view/module/transaction_form.tpl" afterPath="$PROJECT_DIR$/smartcore/template/default/view/module/transaction_form.tpl" />
+      <change beforePath="$PROJECT_DIR$/system/library/document.php" afterPath="$PROJECT_DIR$/system/library/document.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +19,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="createmodule.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/smartcore/controller/core/createmodule.php">
+      <file leaf-file-name="transaction.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartcore/model/module/transaction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="41" />
+            <state relative-caret-position="-164">
+              <caret line="110" column="56" lean-forward="false" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="56" />
+              <folding>
+                <marker date="1526559128683" expanded="true" signature="577:660" ph="Select `tran... transaction" />
+                <marker date="1526559128683" expanded="true" signature="872:956" ph="Select count... transaction" />
+                <marker date="1526559128683" expanded="true" signature="1136:1203" ph="Select * fro... transaction" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accountstock_form.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/accountstock_form.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="59" column="34" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="59" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transaction_form.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/transaction_form.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="104" column="46" lean-forward="false" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="document.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/library/document.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="60" column="10" lean-forward="false" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+              <folding>
+                <marker date="1526560089176" expanded="true" signature="6872:6920" ph="Select * fro... soft_setting" />
+                <marker date="1526560089176" expanded="true" signature="7398:7475" ph="Select `card... card" />
+                <marker date="1526560089176" expanded="true" signature="7627:7726" ph="Select `card... card" />
+                <marker date="1526560089176" expanded="true" signature="7881:7974" ph="Select `user... usertype" />
+                <marker date="1526560089176" expanded="true" signature="8166:8249" ph="Select `user... user_module" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transaction.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartcore/controller/module/transaction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="196" column="13" lean-forward="false" selection-start-line="196" selection-start-column="13" selection-end-line="196" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -67,7 +120,6 @@
         <option value="$PROJECT_DIR$/smartcore/controller/core/profile.php" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/common/mainmenu.tpl" />
         <option value="$PROJECT_DIR$/smartcore/controller/common/dashboard.php" />
-        <option value="$PROJECT_DIR$/system/library/document.php" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/module/card_form.tpl" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/module/card_list.tpl" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/module/card_table.tpl" />
@@ -76,11 +128,15 @@
         <option value="$PROJECT_DIR$/smartcore/template/default/view/common/dashboard.tpl" />
         <option value="$PROJECT_DIR$/fileserver/smartweb_default/default/css/elife.css" />
         <option value="$PROJECT_DIR$/fileserver/smartweb_default/default/js/common.js" />
-        <option value="$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/module/accountstock_form.tpl" />
         <option value="$PROJECT_DIR$/smartcore/controller/module/accountstock.php" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/module/accountstock_table.tpl" />
         <option value="$PROJECT_DIR$/smartcore/controller/core/createmodule.php" />
+        <option value="$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl" />
+        <option value="$PROJECT_DIR$/smartcore/model/module/transaction.php" />
+        <option value="$PROJECT_DIR$/system/library/document.php" />
+        <option value="$PROJECT_DIR$/smartcore/controller/module/transaction.php" />
+        <option value="$PROJECT_DIR$/smartcore/template/default/view/module/transaction_form.tpl" />
       </list>
     </option>
   </component>
@@ -113,7 +169,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,43 +179,7 @@
             <path>
               <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="component" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fileserver" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
@@ -182,15 +201,6 @@
               <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="smartcore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="common" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
@@ -216,6 +226,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -265,12 +276,14 @@
       <workItem from="1525919999118" duration="2461000" />
       <workItem from="1526006880327" duration="2695000" />
       <workItem from="1526275340455" duration="20000" />
-      <workItem from="1526293126495" duration="1595000" />
+      <workItem from="1526293126495" duration="1616000" />
+      <workItem from="1526481941907" duration="2454000" />
+      <workItem from="1526555768353" duration="3142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22219000" />
+    <option name="totallyTimeSpent" value="27836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -281,12 +294,12 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -307,27 +320,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/card_setaccount.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3145">
-          <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/controller/common/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/controller/core/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/mainmenu.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -570,7 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1904">
           <caret line="112" column="21" lean-forward="false" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -585,22 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1649">
           <caret line="97" column="30" lean-forward="false" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
-          <folding>
-            <marker date="1526007972732" expanded="true" signature="9099:9113" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/library/document.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="22" />
-          <folding>
-            <marker date="1525751199984" expanded="true" signature="6786:6834" ph="Select * fro... soft_setting" />
-            <marker date="1525751199984" expanded="true" signature="7312:7389" ph="Select `card... card" />
-            <marker date="1525751199984" expanded="true" signature="7545:7638" ph="Select `user... usertype" />
-            <marker date="1525751199984" expanded="true" signature="7830:7913" ph="Select `user... user_module" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -608,23 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="40" column="72" lean-forward="false" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="102" lean-forward="false" selection-start-line="8" selection-start-column="102" selection-end-line="8" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/accountstock_form.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="155" column="46" lean-forward="false" selection-start-line="155" selection-start-column="46" selection-end-line="155" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,7 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,8 +607,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartcore/controller/core/createmodule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
+        <state relative-caret-position="17">
           <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="98" lean-forward="false" selection-start-line="9" selection-start-column="98" selection-end-line="9" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/model/module/transaction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-164">
+          <caret line="110" column="56" lean-forward="false" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="56" />
+          <folding>
+            <marker date="1526559128683" expanded="true" signature="577:660" ph="Select `tran... transaction" />
+            <marker date="1526559128683" expanded="true" signature="872:956" ph="Select count... transaction" />
+            <marker date="1526559128683" expanded="true" signature="1136:1203" ph="Select * fro... transaction" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/library/document.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="60" column="10" lean-forward="false" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+          <folding>
+            <marker date="1526560089176" expanded="true" signature="6872:6920" ph="Select * fro... soft_setting" />
+            <marker date="1526560089176" expanded="true" signature="7398:7475" ph="Select `card... card" />
+            <marker date="1526560089176" expanded="true" signature="7627:7726" ph="Select `card... card" />
+            <marker date="1526560089176" expanded="true" signature="7881:7974" ph="Select `user... usertype" />
+            <marker date="1526560089176" expanded="true" signature="8166:8249" ph="Select `user... user_module" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/controller/module/transaction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="196" column="13" lean-forward="false" selection-start-line="196" selection-start-column="13" selection-end-line="196" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/accountstock_form.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="59" column="34" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="59" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/transaction_form.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="104" column="46" lean-forward="false" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
           <folding />
         </state>
       </provider>

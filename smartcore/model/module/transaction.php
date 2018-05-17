@@ -51,7 +51,7 @@ class ModelModuleTransaction extends Model
     {
         $sql = "Select count(*) as total
                 from `transaction`
-				where 1=1 ". $where;
+				where deleteby = '' ". $where;
 
         $query = $this->db->query($sql);
         return $query->row['total'];
@@ -61,7 +61,7 @@ class ModelModuleTransaction extends Model
     {
         $sql = "Select *
                 from `transaction`
-				where 1=1 ";
+				where deleteby = '' ";
 
         $sql .= $where;
         if ($to > 0) {
@@ -88,7 +88,14 @@ class ModelModuleTransaction extends Model
         $where = "id = '" . $id . "'";
         $this->db->updateData("transaction", $field, $value, $where);
     }
-
+    public function createId($prefix)
+    {
+        $now = $this->date->getToday();
+        $year = $this->date->getYear($now);
+        $month = $this->date->getMonth($now);
+        $nextid = $this->db->getNextIdVarCharNumber('transaction','transactionid',$prefix.$year.$month);
+        return $prefix.$year.$month.$this->string->numberToString($nextid,3);
+    }
     public function save($data)
     {
         $obj = $this->getItem($data['id']);
@@ -100,9 +107,14 @@ class ModelModuleTransaction extends Model
                     $obj[$col] = $data[$col];
             }
             $data = $obj;
+            $data['updatedate'] = $this->date->getToday();
+            $data['updateby'] = $this->user->getUserName();
         } else {
             //insert new item
-
+            $data['createdate'] = $this->date->getToday();
+            $data['createby'] = $this->user->getUserName();
+            $data['updatedate'] = $this->date->getToday();
+            $data['updateby'] = $this->user->getUserName();
         }
 
 
@@ -120,12 +132,18 @@ class ModelModuleTransaction extends Model
         }
         return $data['id'];
     }
-
+    public function destroy($id)
+    {
+        $where = "id = '" . $id . "'";
+        $this->db->deleteData("transaction", $where);
+    }
 
     public function delete($id)
     {
         $where = "id = '" . $id . "'";
-        $this->db->deleteData("transaction", $where);
+        $field = array('deleteby','deletedate');
+        $value = array($this->user->getUserName(),$this->date->getToday());
+        $this->db->updateData("transaction", $field, $value, $where);
     }
 }
 ?>

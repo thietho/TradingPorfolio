@@ -21,84 +21,56 @@
         <div class="row">
             <form class="form-horizontal" id="frmTransaction">
                 <input type="hidden" id="id" name="id" value="<?php echo $item['id'] ?>">
-                
+                <input type="hidden" id="transactionid" name="transactionid" value="<?php echo $item['transactionid'] ?>">
+
                 <div class="col-md-6 col-md-offset-3">
-                    <div class="form-group">
-						<label class="col-md-3 control-label">Mã giao dịch</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="transactionid" id="transactionid" placeholder="Mã giao dịch"
-                                       value="<?php echo $item['transactionid'] ?>">
-						</div>
-					</div>
+
 					<div class="form-group">
 						<label class="col-md-3 control-label">Tài khoản</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="accountid" id="accountid" placeholder="Tài khoản"
-                                       value="<?php echo $item['accountid'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Chủ tài khoản</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="cardid" id="cardid" placeholder="Chủ tài khoản"
-                                       value="<?php echo $item['cardid'] ?>">
+							<select class="form-control input-sm" name="accountid" id="accountid">
+								<?php foreach($accountstocks as $accountstock){ ?>
+								<option value="<?php echo $accountstock['accountid']?>" <?php echo $accountstock['accountid']==$item['accountid']?'selected':''?>><?php echo $this->document->getCard($accountstock['cardid'])?> - <?php echo $this->document->getCard($accountstock['openat'])?></option>
+								<?php } ?>
+							</select>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Ngày giao dịch</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
+							<input type="text" class="form-control input-sm bs-datepicker"
                                        name="transactiondate" id="transactiondate" placeholder="Ngày giao dịch"
                                        value="<?php echo $item['transactiondate'] ?>">
 						</div>
 					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Ngày nhận tiền(T+2)</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="receivemoneydate" id="receivemoneydate" placeholder="Ngày nhận tiền(T+2)"
-                                       value="<?php echo $item['receivemoneydate'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Ngày nhận ck(T+3)</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="receivestockdate" id="receivestockdate" placeholder="Ngày nhận ck(T+3)"
-                                       value="<?php echo $item['receivestockdate'] ?>">
-						</div>
-					</div>
+
 					<div class="form-group">
 						<label class="col-md-3 control-label">Mã ck</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="symbol" id="symbol" placeholder="Mã ck"
-                                       value="<?php echo $item['symbol'] ?>">
+							<select class="form-control input-sm" name="symbol" id="symbol">
+								<option value=""></option>
+								<?php foreach($itemcks as $ck){ ?>
+								<option value="<?php echo $ck['symbol'] ?>" <?php echo $ck['symbol']==$item['symbol']?'selected':''?>><?php echo $ck['symbol'].' - '.$ck['name']?></option>
+								<?php } ?>
+							</select>
 						</div>
 					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Tên ck</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="name" id="name" placeholder="Tên ck"
-                                       value="<?php echo $item['name'] ?>">
-						</div>
-					</div>
+
 					<div class="form-group">
 						<label class="col-md-3 control-label">Loại giao dịch</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="type" id="type" placeholder="Loại giao dịch"
-                                       value="<?php echo $item['type'] ?>">
+
+                            <select class="form-control input-sm" name="type" id="type">
+                                <?php foreach($this->document->transactiontype as $key => $val){ ?>
+                                <option value="<?php echo $key;?>" <?php echo $key==$item['type']?'selected':''?>><?php echo $val?></option>
+                                <?php } ?>
+                            </select>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Giá vốn</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
+							<input type="text" class="form-control input-sm number"
                                        name="costofsale" id="costofsale" placeholder="Giá vốn"
                                        value="<?php echo $item['costofsale'] ?>">
 						</div>
@@ -106,7 +78,7 @@
 					<div class="form-group">
 						<label class="col-md-3 control-label">Số lượng</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
+							<input type="text" class="form-control input-sm number"
                                        name="volume" id="volume" placeholder="Số lượng"
                                        value="<?php echo $item['volume'] ?>">
 						</div>
@@ -114,7 +86,7 @@
 					<div class="form-group">
 						<label class="col-md-3 control-label">Giá</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
+							<input type="text" class="form-control input-sm number"
                                        name="price" id="price" placeholder="Giá"
                                        value="<?php echo $item['price'] ?>">
 						</div>
@@ -122,23 +94,25 @@
 					<div class="form-group">
 						<label class="col-md-3 control-label">Phí giao dich</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="fee" id="fee" placeholder="Phí giao dich"
-                                       value="<?php echo $item['fee'] ?>">
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control number" name="fee" id="fee" placeholder="Phí giao dich"  value="<?php echo $item['fee'] ?>">
+								<span class="input-group-addon">%</span>
+							</div>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Thuế</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="tax" id="tax" placeholder="Thuế"
-                                       value="<?php echo $item['tax'] ?>">
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control number" name="tax" id="tax" placeholder="Thuế"  value="<?php echo $item['tax'] ?>">
+								<span class="input-group-addon">%</span>
+							</div>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Số tiền giao dịch</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
+							<input type="text" class="form-control input-sm number"
                                        name="total" id="total" placeholder="Số tiền giao dịch"
                                        value="<?php echo $item['total'] ?>">
 						</div>
@@ -146,7 +120,7 @@
 					<div class="form-group">
 						<label class="col-md-3 control-label">Lợi nhuận</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
+							<input type="text" class="form-control input-sm number"
                                        name="profit" id="profit" placeholder="Lợi nhuận"
                                        value="<?php echo $item['profit'] ?>">
 						</div>
@@ -159,54 +133,7 @@
                                        value="<?php echo $item['notes'] ?>">
 						</div>
 					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Ngày tạo</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="createdate" id="createdate" placeholder="Ngày tạo"
-                                       value="<?php echo $item['createdate'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Tạo bởi</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="createby" id="createby" placeholder="Tạo bởi"
-                                       value="<?php echo $item['createby'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Ngày cập nhật</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="updatedate" id="updatedate" placeholder="Ngày cập nhật"
-                                       value="<?php echo $item['updatedate'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Cập nhật bởi</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="updateby" id="updateby" placeholder="Cập nhật bởi"
-                                       value="<?php echo $item['updateby'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Ngày xóa</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="deletedate" id="deletedate" placeholder="Ngày xóa"
-                                       value="<?php echo $item['deletedate'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Xóa bởi</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="deleteby" id="deleteby" placeholder="Xóa bởi"
-                                       value="<?php echo $item['deleteby'] ?>">
-						</div>
-					</div>
+
 					
                 </div>
             </form>

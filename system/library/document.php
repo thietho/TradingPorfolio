@@ -56,7 +56,10 @@ final class Document
         'LA' => 'Location A',
         'LB' => 'Location B'
     );
-
+    public $transactiontype = array(
+        'B' => 'Mua',
+        'S' => 'Bán'
+    );
     public function __construct()
     {
         $this->config = Registry::get('config');
@@ -257,7 +260,13 @@ final class Document
 									where cardid ='" . $cardid . "' ");
         return $query->row[$name];
     }
-
+    public function getAccountstock($accountid,$name = 'cardid')
+    {
+        $query = $this->db->query("Select `accountstock`.*
+									from `accountstock`
+									where accountid ='" . $accountid . "' ");
+        return $query->row[$name];
+    }
     public function getUserType($usertypeid,$name = 'usertypename')
     {
         $query = $this->db->query("Select `usertype`.*
