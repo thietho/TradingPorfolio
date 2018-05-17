@@ -40,7 +40,7 @@
 						<div class="col-md-9">
 							<input type="text" class="form-control input-sm bs-datepicker"
                                        name="transactiondate" id="transactiondate" placeholder="Ngày giao dịch"
-                                       value="<?php echo $item['transactiondate'] ?>">
+                                       value="<?php echo $this->date->formatMySQLDate($item['transactiondate']) ?>">
 						</div>
 					</div>
 

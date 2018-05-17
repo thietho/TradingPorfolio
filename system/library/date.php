@@ -94,6 +94,20 @@ final class Date
         $befordate = $this->addday($date,-1);
         return $this->getDay($befordate);
     }
+    function addWorkDay($stringdate, $days) //fomate yy-mm-dd)
+    {
+        $date = $stringdate;
+        while ($days>0){
+            $date = $this->addday($date,1);
+            $arr = getdate($this->timeToInt($date));
+            if($arr['wday']!= 0 && $arr['wday']!= 6){
+                $days-=1;
+            }
+
+        }
+
+        return $date;
+    }
     function addday($stringdate, $days) //fomate yy-mm-dd
     {
         $d = $this->getDay($stringdate);

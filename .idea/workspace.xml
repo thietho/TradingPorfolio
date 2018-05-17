@@ -5,10 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/logs/log.txt" afterPath="$PROJECT_DIR$/logs/log.txt" />
       <change beforePath="$PROJECT_DIR$/smartcore/controller/module/transaction.php" afterPath="$PROJECT_DIR$/smartcore/controller/module/transaction.php" />
-      <change beforePath="$PROJECT_DIR$/smartcore/model/module/transaction.php" afterPath="$PROJECT_DIR$/smartcore/model/module/transaction.php" />
-      <change beforePath="$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl" afterPath="$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl" />
       <change beforePath="$PROJECT_DIR$/smartcore/template/default/view/module/transaction_form.tpl" afterPath="$PROJECT_DIR$/smartcore/template/default/view/module/transaction_form.tpl" />
+      <change beforePath="$PROJECT_DIR$/smartcore/template/default/view/module/transaction_table.tpl" afterPath="$PROJECT_DIR$/smartcore/template/default/view/module/transaction_table.tpl" />
+      <change beforePath="$PROJECT_DIR$/system/library/date.php" afterPath="$PROJECT_DIR$/system/library/date.php" />
       <change beforePath="$PROJECT_DIR$/system/library/document.php" afterPath="$PROJECT_DIR$/system/library/document.php" />
+      <change beforePath="$PROJECT_DIR$/system/library/string.php" afterPath="$PROJECT_DIR$/system/library/string.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +23,7 @@
       <file leaf-file-name="transaction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartcore/model/module/transaction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-164">
+            <state relative-caret-position="1621">
               <caret line="110" column="56" lean-forward="false" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="56" />
               <folding>
                 <marker date="1526559128683" expanded="true" signature="577:660" ph="Select `tran... transaction" />
@@ -37,17 +38,17 @@
         <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/accountstock_form.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="59" column="34" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="59" selection-end-column="34" />
+              <caret line="59" column="34" lean-forward="false" selection-start-line="56" selection-start-column="28" selection-end-line="59" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transaction_form.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="transaction_form.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/transaction_form.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="104" column="46" lean-forward="false" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
+            <state relative-caret-position="408">
+              <caret line="42" column="86" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -56,14 +57,15 @@
       <file leaf-file-name="document.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/library/document.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="60" column="10" lean-forward="false" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+            <state relative-caret-position="451">
+              <caret line="273" column="62" lean-forward="false" selection-start-line="273" selection-start-column="62" selection-end-line="273" selection-end-column="62" />
               <folding>
-                <marker date="1526560089176" expanded="true" signature="6872:6920" ph="Select * fro... soft_setting" />
-                <marker date="1526560089176" expanded="true" signature="7398:7475" ph="Select `card... card" />
-                <marker date="1526560089176" expanded="true" signature="7627:7726" ph="Select `card... card" />
-                <marker date="1526560089176" expanded="true" signature="7881:7974" ph="Select `user... usertype" />
-                <marker date="1526560089176" expanded="true" signature="8166:8249" ph="Select `user... user_module" />
+                <marker date="1526563593597" expanded="true" signature="6872:6920" ph="Select * fro... soft_setting" />
+                <marker date="1526563593597" expanded="true" signature="7398:7475" ph="Select `card... card" />
+                <marker date="1526563593597" expanded="true" signature="7627:7726" ph="Select `card... card" />
+                <marker date="1526563593597" expanded="true" signature="7865:7942" ph="Select `item... item" />
+                <marker date="1526563593597" expanded="true" signature="8097:8190" ph="Select `user... usertype" />
+                <marker date="1526563593597" expanded="true" signature="8382:8465" ph="Select `user... user_module" />
               </folding>
             </state>
           </provider>
@@ -73,7 +75,40 @@
         <entry file="file://$PROJECT_DIR$/smartcore/controller/module/transaction.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="196" column="13" lean-forward="false" selection-start-line="196" selection-start-column="13" selection-end-line="196" selection-end-column="13" />
+              <caret line="211" column="37" lean-forward="false" selection-start-line="211" selection-start-column="37" selection-end-line="211" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="string.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/system/library/string.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+              <folding>
+                <marker date="1526565078040" expanded="true" signature="2798:2907" ph="..." />
+                <marker date="1526565078040" expanded="true" signature="2999:3297" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accountstock_table.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/accountstock_table.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="45" lean-forward="false" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transaction_table.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/transaction_table.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="40" column="68" lean-forward="false" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -134,9 +169,12 @@
         <option value="$PROJECT_DIR$/smartcore/controller/core/createmodule.php" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/common/sitebar.tpl" />
         <option value="$PROJECT_DIR$/smartcore/model/module/transaction.php" />
-        <option value="$PROJECT_DIR$/system/library/document.php" />
-        <option value="$PROJECT_DIR$/smartcore/controller/module/transaction.php" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/module/transaction_form.tpl" />
+        <option value="$PROJECT_DIR$/system/library/date.php" />
+        <option value="$PROJECT_DIR$/system/library/document.php" />
+        <option value="$PROJECT_DIR$/smartcore/template/default/view/module/transaction_table.tpl" />
+        <option value="$PROJECT_DIR$/smartcore/controller/module/transaction.php" />
+        <option value="$PROJECT_DIR$/system/library/string.php" />
       </list>
     </option>
   </component>
@@ -278,12 +316,12 @@
       <workItem from="1526275340455" duration="20000" />
       <workItem from="1526293126495" duration="1616000" />
       <workItem from="1526481941907" duration="2454000" />
-      <workItem from="1526555768353" duration="3142000" />
+      <workItem from="1526555768353" duration="7853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27836000" />
+    <option name="totallyTimeSpent" value="32547000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -320,32 +358,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/common/mainmenu.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/library/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3400">
-          <caret line="200" column="33" lean-forward="false" selection-start-line="200" selection-start-column="20" selection-end-line="200" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/page/base.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fileserver/smartweb_default/default/image/admin.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -579,13 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/accountstock_table.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="40" column="72" lean-forward="false" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/smartcore/controller/module/accountstock.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -623,7 +628,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartcore/model/module/transaction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-164">
+        <state relative-caret-position="1621">
           <caret line="110" column="56" lean-forward="false" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="56" />
           <folding>
             <marker date="1526559128683" expanded="true" signature="577:660" ph="Select `tran... transaction" />
@@ -633,24 +638,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/system/library/date.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="108" column="21" lean-forward="false" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/system/library/document.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="60" column="10" lean-forward="false" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+        <state relative-caret-position="451">
+          <caret line="273" column="62" lean-forward="false" selection-start-line="273" selection-start-column="62" selection-end-line="273" selection-end-column="62" />
           <folding>
-            <marker date="1526560089176" expanded="true" signature="6872:6920" ph="Select * fro... soft_setting" />
-            <marker date="1526560089176" expanded="true" signature="7398:7475" ph="Select `card... card" />
-            <marker date="1526560089176" expanded="true" signature="7627:7726" ph="Select `card... card" />
-            <marker date="1526560089176" expanded="true" signature="7881:7974" ph="Select `user... usertype" />
-            <marker date="1526560089176" expanded="true" signature="8166:8249" ph="Select `user... user_module" />
+            <marker date="1526563593597" expanded="true" signature="6872:6920" ph="Select * fro... soft_setting" />
+            <marker date="1526563593597" expanded="true" signature="7398:7475" ph="Select `card... card" />
+            <marker date="1526563593597" expanded="true" signature="7627:7726" ph="Select `card... card" />
+            <marker date="1526563593597" expanded="true" signature="7865:7942" ph="Select `item... item" />
+            <marker date="1526563593597" expanded="true" signature="8097:8190" ph="Select `user... usertype" />
+            <marker date="1526563593597" expanded="true" signature="8382:8465" ph="Select `user... user_module" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/controller/module/transaction.php">
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/transaction_form.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="196" column="13" lean-forward="false" selection-start-line="196" selection-start-column="13" selection-end-line="196" selection-end-column="13" />
+        <state relative-caret-position="408">
+          <caret line="42" column="86" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="86" />
           <folding />
         </state>
       </provider>
@@ -658,16 +672,51 @@
     <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/accountstock_form.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="59" column="34" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="59" selection-end-column="34" />
+          <caret line="59" column="34" lean-forward="false" selection-start-line="56" selection-start-column="28" selection-end-line="59" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/transaction_form.tpl">
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/transaction_table.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="104" column="46" lean-forward="false" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
+        <state relative-caret-position="323">
+          <caret line="40" column="68" lean-forward="false" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/controller/module/transaction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="211" column="37" lean-forward="false" selection-start-line="211" selection-start-column="37" selection-end-line="211" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="707" column="9" lean-forward="false" selection-start-line="707" selection-start-column="9" selection-end-line="707" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartcore/template/default/view/module/accountstock_table.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="45" lean-forward="false" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/library/string.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding>
+            <marker date="1526565078040" expanded="true" signature="2798:2907" ph="..." />
+            <marker date="1526565078040" expanded="true" signature="2999:3297" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

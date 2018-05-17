@@ -267,6 +267,13 @@ final class Document
 									where accountid ='" . $accountid . "' ");
         return $query->row[$name];
     }
+    public function getItem($symbol,$name = 'name')
+    {
+        $query = $this->db->query("Select `item`.*
+									from `item`
+									where symbol ='" . $symbol . "' ");
+        return $query->row[$name];
+    }
     public function getUserType($usertypeid,$name = 'usertypename')
     {
         $query = $this->db->query("Select `usertype`.*

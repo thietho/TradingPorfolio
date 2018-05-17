@@ -16,8 +16,16 @@ final class String
     {
         /** @var Config $config */
         $config = Registry::get('config');
-        if($n==0)
+        if($n==0){
             $n = $config->get('config_number_decimal');
+            if($n == 0){
+                $arr = explode('.',$num);
+                $str = number_format($arr[0]);
+                $str.= isset($arr[1])?'.'.$arr[1]:'';
+                return $str;
+            }
+        }
+
 
         $dec_point = $config->get('config_dec_point');
         $thousands_sep = $config->get('config_thousands_sep');

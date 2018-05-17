@@ -11,7 +11,7 @@
 				<th class="sort-default" sortcol="receivemoneydate">Ngày nhận tiền(T+2)</th>
 				<th class="sort-default" sortcol="receivestockdate">Ngày nhận ck(T+3)</th>
 				<th class="sort-default" sortcol="symbol">Mã ck</th>
-				<th class="sort-default" sortcol="name">Tên ck</th>
+
 				<th class="sort-default" sortcol="type">Loại giao dịch</th>
 				<th class="sort-default" sortcol="costofsale">Giá vốn</th>
 				<th class="sort-default" sortcol="volume">Số lượng</th>
@@ -21,13 +21,6 @@
 				<th class="sort-default" sortcol="total">Số tiền giao dịch</th>
 				<th class="sort-default" sortcol="profit">Lợi nhuận</th>
 				<th class="sort-default" sortcol="notes">Ghi chú</th>
-				<th class="sort-default" sortcol="createdate">Ngày tạo</th>
-				<th class="sort-default" sortcol="createby">Tạo bởi</th>
-				<th class="sort-default" sortcol="updatedate">Ngày cập nhật</th>
-				<th class="sort-default" sortcol="updateby">Cập nhật bởi</th>
-				<th class="sort-default" sortcol="deletedate">Ngày xóa</th>
-				<th class="sort-default" sortcol="deleteby">Xóa bởi</th>
-				
                 <th class="tool-title">Tool</th>
             </tr>
             <?php $index = ($objPage['pape']-1) * $objPage['itemsPerPage'];?>
@@ -36,27 +29,21 @@
                 <td class="text-center"><?php echo ++$index; ?></td>
                 <td><?php echo $transaction['transactionid'] ?></td>
 				<td><?php echo $transaction['accountid'] ?></td>
-				<td><?php echo $transaction['cardid'] ?></td>
-				<td><?php echo $transaction['transactiondate'] ?></td>
-				<td><?php echo $transaction['receivemoneydate'] ?></td>
-				<td><?php echo $transaction['receivestockdate'] ?></td>
+				<td><?php echo $this->document->getCard($transaction['cardid']) ?></td>
+				<td><?php echo $this->date->formatMySQLDate($transaction['transactiondate']) ?></td>
+				<td><?php echo $this->date->formatMySQLDate($transaction['receivemoneydate']) ?></td>
+				<td><?php echo $this->date->formatMySQLDate($transaction['receivestockdate']) ?></td>
 				<td><?php echo $transaction['symbol'] ?></td>
-				<td><?php echo $transaction['name'] ?></td>
-				<td><?php echo $transaction['type'] ?></td>
-				<td><?php echo $transaction['costofsale'] ?></td>
-				<td><?php echo $transaction['volume'] ?></td>
-				<td><?php echo $transaction['price'] ?></td>
-				<td><?php echo $transaction['fee'] ?></td>
-				<td><?php echo $transaction['tax'] ?></td>
-				<td><?php echo $transaction['total'] ?></td>
-				<td><?php echo $transaction['profit'] ?></td>
+
+				<td><?php echo $this->document->transactiontype[$transaction['type']] ?></td>
+				<td class="number"><?php echo $this->string->numberFormate($transaction['costofsale']) ?></td>
+				<td class="number"><?php echo $this->string->numberFormate($transaction['volume']) ?></td>
+				<td class="number"><?php echo $this->string->numberFormate($transaction['price']) ?></td>
+				<td class="number"><?php echo $this->string->numberFormate($transaction['fee']) ?></td>
+				<td class="number"><?php echo $this->string->numberFormate($transaction['tax']) ?></td>
+				<td class="number"><?php echo $this->string->numberFormate($transaction['total']) ?></td>
+				<td class="number"><?php echo $this->string->numberFormate($transaction['profit']) ?></td>
 				<td><?php echo $transaction['notes'] ?></td>
-				<td><?php echo $transaction['createdate'] ?></td>
-				<td><?php echo $transaction['createby'] ?></td>
-				<td><?php echo $transaction['updatedate'] ?></td>
-				<td><?php echo $transaction['updateby'] ?></td>
-				<td><?php echo $transaction['deletedate'] ?></td>
-				<td><?php echo $transaction['deleteby'] ?></td>
 				
                 <td class="text-center">
                     <?php if($_GET['type'] == 'popup'){ ?>

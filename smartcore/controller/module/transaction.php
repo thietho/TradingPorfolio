@@ -196,7 +196,10 @@ class ControllerModuleTransaction extends Controller
                 $data['transactionid'] = $this->model_module_transaction->createId($data['type']);
             }
             $data['cardid'] = $this->document->getAccountstock($data['accountid']);
+            $data['name'] = $this->document->getItem($data['symbol']);
             $data['transactiondate'] = $this->date->formatViewDate($data['transactiondate']);
+            $data['receivemoneydate'] = $this->date->addWorkDay($data['transactiondate'],2);
+            $data['receivestockdate'] = $this->date->addWorkDay($data['transactiondate'],3);
             $data['volume'] = $this->string->toNumber($data['volume']);
             $data['price'] = $this->string->toNumber($data['price']);
             $data['fee'] = $this->string->toNumber($data['fee']);
