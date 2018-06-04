@@ -23,7 +23,7 @@
                 <input type="hidden" id="id" name="id" value="<?php echo $item['id'] ?>">
                 <input type="hidden" id="transactionid" name="transactionid" value="<?php echo $item['transactionid'] ?>">
 
-                <div class="col-md-6 col-md-offset-3">
+                <div class="col-md-6">
 
 					<div class="form-group">
 						<label class="col-md-3 control-label">Tài khoản</label>
@@ -67,6 +67,15 @@
                             </select>
 						</div>
 					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">Ghi chú</label>
+						<div class="col-md-9">
+							<textarea class="form-control input-sm" placeholder="Ghi chú"
+									  name="notes" id="notes"><?php echo $item['notes'] ?></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
 					<div class="form-group">
 						<label class="col-md-3 control-label">Giá vốn</label>
 						<div class="col-md-9">
@@ -125,14 +134,7 @@
                                        value="<?php echo $item['profit'] ?>">
 						</div>
 					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Ghi chú</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="notes" id="notes" placeholder="Ghi chú"
-                                       value="<?php echo $item['notes'] ?>">
-						</div>
-					</div>
+
 
 					
                 </div>

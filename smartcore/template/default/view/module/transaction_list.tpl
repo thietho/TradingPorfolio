@@ -36,15 +36,11 @@
                     <div>
                         <table>
                             <tr>
-                                <td><button onclick="window.location.href='<?php echo HTTP_WEB ?>?route=module/transaction/insert'" type="button" class="btn btn-sm btn-danger"><span class="fa fa-plus"></span> Add new</button></td>
+                                <td><button onclick="window.location.href='<?php echo HTTP_WEB ?>?route=module/transaction/insert&type=B'" type="button" class="btn btn-sm btn-danger"><span class="fa fa-plus"></span> Buy</button></td>
+                                <td><button onclick="window.location.href='<?php echo HTTP_WEB ?>?route=module/transaction/insert&type=S'" type="button" class="btn btn-sm btn-danger"><span class="fa fa-plus"></span> Sale</button></td>
                                 <td><button type="button" class="btn btn-sm btn-default"><span class="fa fa-print"></span> Print</button></td>
                                 <td><button type="button" class="btn btn-sm btn-default"><span class="fa fa-file-excel-o"></span> Excel</button></td>
-                                <td>
-                                    <select class="bs-select">
-                                        <option value="">More Action...</option>
-                                    </select>
-                                </td>
-                                <td></td>
+
                             </tr>
                         </table>
 
