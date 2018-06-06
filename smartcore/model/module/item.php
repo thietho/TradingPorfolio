@@ -19,6 +19,13 @@ class ModelModuleItem extends Model
 									where id ='" . $id . "' ");
         return $query->row;
     }
+    public function getItemSybol($symbol)
+    {
+        $query = $this->db->query("Select `item`.*
+									from `item`
+									where symbol ='" . $symbol . "' ");
+        return $query->row;
+    }
 
     /**
      * @param string $where

@@ -43,7 +43,7 @@
                 </div>
             </form>
         </div>
-
+        <?php if($_GET['type'] != 'popup'){ ?>
         <div class="row">
             <div class="col-md-6 col-md-offset-3 margin-top-30">
                 <div class="text-center">
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-
+        <?php } ?>
     </div>
     <!-- END BLOCk -->
 </div>

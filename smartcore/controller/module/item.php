@@ -154,4 +154,25 @@ class ControllerModuleItem extends Controller
         }
         return true;
     }
+    public function getItem(){
+        $symbol = $this->request->get['accountid'];
+        $data = $this->model_module_item->getItemSybol($symbol);
+        $this->data['output'] = json_encode($data);
+        $this->template = "common/output.tpl";
+        $this->render();
+    }
+    public function getItemList(){
+        $col = $this->request->get['col'];
+        $val = $this->request->get['val'];
+        $where = '';
+        if($col !=''){
+            $where = " AND $col like '$val'";
+        }
+
+        $data = $this->model_module_item->getList($where);
+
+        $this->data['output'] = json_encode($data);
+        $this->template = "common/output.tpl";
+        $this->render();
+    }
 }

@@ -50,13 +50,16 @@
 
 					<div class="form-group">
 						<label class="col-md-3 control-label">Mã ck</label>
-						<div class="col-md-9">
+						<div class="col-md-7">
 							<select class="form-control input-sm" name="symbol" id="symbol">
 								<option value=""></option>
 								<?php foreach($itemcks as $ck){ ?>
 								<option value="<?php echo $ck['symbol'] ?>" <?php echo $ck['symbol']==$item['symbol']?'selected':''?>><?php echo $ck['symbol'].' - '.$ck['name']?></option>
 								<?php } ?>
 							</select>
+						</div>
+						<div class="col-md-2">
+							<button type="button" class="btn btn-sm btn-icon btn-success" id="btnAddItem"><span class="fa fa-plus"></span></button>
 						</div>
 					</div>
 
@@ -201,7 +204,9 @@
 							    str += '<option value="'+ list[i].accountid +'">' + list[i].text + '</option>';
                             }
                             $('#frmTransaction #accountid').html(str);
-                            $('#frmTransaction #accountid').val(selectid);
+                            $('#frmTransaction #accountid').val(selectid).change();
+                            transation.getTotal();
+
                         });
 
                         $('#modal-accountstock-form').modal('hide');
@@ -213,6 +218,40 @@
         });
 
     });
+    $('#frmTransaction #btnAddItem').click(function () {
+		$('#modal-item-form').modal();
+		$('#modal-item-form .modal-body').load("?route=module/item/insert&type=popup",function () {
+            $('#btnSaveItem').unbind('click');
+            $('#btnSaveItem').click(function () {
+                $.post("?route=module/item/save",$('#frmItem').serialize(),function(data){
+
+                    var obj = $.parseJSON(data)
+                    if(obj.errorstext != '')
+                    {
+                        toastr.error(obj.errorstext,"Errors");
+                        endLoading();
+                    }
+                    else
+                    {
+                        var selectid = obj.symbol;
+                        //Load lại combobox
+                        var str = '';
+                        $.getJSON("?route=module/item/getItemList",function (list) {
+                            for(var i in list){
+                                str += '<option value="'+ list[i].symbol +'">' + list[i].symbol + " - "+ list[i].name + '</option>';
+                            }
+                            $('#frmTransaction #symbol').html(str);
+                            $('#frmTransaction #symbol').val(selectid);
+
+
+                        });
+                        $('#modal-item-form').modal('hide');
+                    }
+
+                });
+            });
+        });
+    });
 </script>
 <div class="modal fade" id="modal-accountstock-form" tabindex="-1" role="dialog" aria-labelledby="modal-default-header">
 	<div class="modal-dialog modal-lg" role="document">
@@ -223,6 +262,19 @@
 			<div class="modal-body"></div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" id="btnSaveAccountStock"><span class="fa fa-save"></span> Lưu tài khoản</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="modal-item-form" tabindex="-1" role="dialog" aria-labelledby="modal-default-header">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<h4 class="modal-title" id="modal-default-header">Thêm mã chứng khoán</h4>
+			</div>
+			<div class="modal-body"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" id="btnSaveItem"><span class="fa fa-save"></span> Lưu mã chứng khoán</button>
 			</div>
 		</div>
 	</div>
