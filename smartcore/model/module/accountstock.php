@@ -25,6 +25,13 @@ class ModelModuleAccountstock extends Model
 									where id ='" . $id . "' ");
         return $query->row;
     }
+    public function getItembyId($accountid)
+    {
+        $query = $this->db->query("Select `accountstock`.*
+									from `accountstock`
+									where accountid ='" . $accountid . "' ");
+        return $query->row;
+    }
 
     /**
      * @param string $where

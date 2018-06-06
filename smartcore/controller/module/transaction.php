@@ -153,13 +153,22 @@ class ControllerModuleTransaction extends Controller
     private function getForm()
     {
         $id = $this->request->get['id'];
+        $type = $this->request->get['type'];
         if ($id) {
             $this->data['item'] = $this->model_module_transaction->getItem($id);
         }else{
+            $this->data['item']['type'] = $type;
             $this->data['item']['transactiondate'] = $this->date->getToday();
         }
+        switch ($this->data['item']['type']){
+            case "B":
+                $this->template = "module/transaction_buy.tpl";
+                break;
+            case "S":
+                $this->template = "module/transaction_sale.tpl";
+                break;
+        }
 
-        $this->template = "module/transaction_form.tpl";
         $this->layout = "page/home";
         $type = $this->request->get['type'];
         if ($type == 'popup')

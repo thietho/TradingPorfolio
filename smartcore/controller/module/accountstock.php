@@ -169,7 +169,14 @@ class ControllerModuleAccountstock extends Controller
 
         if ("" == $data['accountid']) {
 			$this->errors['accountid'] = "Tài khoản not empty";
-		}
+		}else{
+            if($data['id'] == ''){
+                $obj = $this->model_module_accountstock->getItembyId($data['accountid']);
+                if(count($obj)){
+                    $this->errors['accountid'] = "Tài khoản đã được sử dụng!";
+                }
+            }
+        }
 		if ("" == $data['openat']) {
 			$this->errors['openat'] = "Mở tại not empty";
 		}
@@ -197,5 +204,28 @@ class ControllerModuleAccountstock extends Controller
             return false;
         }
         return true;
+    }
+    public function getAccountStock(){
+        $accountid = $this->request->get['accountid'];
+        $data = $this->model_module_accountstock->getItembyId($accountid);
+        $this->data['output'] = json_encode($data);
+        $this->template = "common/output.tpl";
+        $this->render();
+    }
+    public function getAccountStockList(){
+        $col = $this->request->get['col'];
+        $val = $this->request->get['val'];
+        $where = '';
+        if($col !=''){
+            $where = " AND $col like '$val'";
+        }
+
+        $data = $this->model_module_accountstock->getList($where);
+        foreach ($data as &$item){
+            $item['text'] = $item['accountid']." - ".$this->document->getCard($item['cardid'])." - ".$this->document->getCard($item['openat']);
+        }
+        $this->data['output'] = json_encode($data);
+        $this->template = "common/output.tpl";
+        $this->render();
     }
 }

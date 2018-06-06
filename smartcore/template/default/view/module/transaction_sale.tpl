@@ -64,14 +64,7 @@
 					</div>
 				</div>
 				<div class="col-md-6">
-					<div class="form-group">
-						<label class="col-md-3 control-label">Giá vốn</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm number"
-                                       name="costofsale" id="costofsale" placeholder="Giá vốn"
-                                       value="<?php echo $item['costofsale'] ?>">
-						</div>
-					</div>
+
 					<div class="form-group">
 						<label class="col-md-3 control-label">Số lượng</label>
 						<div class="col-md-9">
@@ -97,31 +90,16 @@
 							</div>
 						</div>
 					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Thuế</label>
-						<div class="col-md-9">
-							<div class="input-group input-group-sm">
-								<input type="text" class="form-control number" name="tax" id="tax" placeholder="Thuế"  value="<?php echo $item['tax'] ?>">
-								<span class="input-group-addon">%</span>
-							</div>
-						</div>
-					</div>
+
 					<div class="form-group">
 						<label class="col-md-3 control-label">Số tiền giao dịch</label>
 						<div class="col-md-9">
 							<input type="text" class="form-control input-sm number"
-                                       name="total" id="total" placeholder="Số tiền giao dịch"
+                                       name="total" id="total" placeholder="Số tiền giao dịch" readonly
                                        value="<?php echo $item['total'] ?>">
 						</div>
 					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Lợi nhuận</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm number"
-                                       name="profit" id="profit" placeholder="Lợi nhuận"
-                                       value="<?php echo $item['profit'] ?>">
-						</div>
-					</div>
+
 
 
 					

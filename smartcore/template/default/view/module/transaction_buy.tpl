@@ -28,12 +28,15 @@
 
 					<div class="form-group">
 						<label class="col-md-3 control-label">Tài khoản</label>
-						<div class="col-md-9">
+						<div class="col-md-7">
 							<select class="form-control input-sm" name="accountid" id="accountid">
 								<?php foreach($accountstocks as $accountstock){ ?>
-								<option value="<?php echo $accountstock['accountid']?>" <?php echo $accountstock['accountid']==$item['accountid']?'selected':''?>><?php echo $this->document->getCard($accountstock['cardid'])?> - <?php echo $this->document->getCard($accountstock['openat'])?></option>
+								<option value="<?php echo $accountstock['accountid']?>" <?php echo $accountstock['accountid']==$item['accountid']?'selected':''?>><?php echo $accountstock['accountid']?> - <?php echo $this->document->getCard($accountstock['cardid'])?> - <?php echo $this->document->getCard($accountstock['openat'])?></option>
 								<?php } ?>
 							</select>
+						</div>
+						<div class="col-md-2">
+							<button type="button" class="btn btn-sm btn-icon btn-success" id="btnAddAccountStock"><span class="fa fa-plus"></span></button>
 						</div>
 					</div>
 					<div class="form-group">
@@ -96,7 +99,7 @@
 					<div class="form-group">
 						<label class="col-md-3 control-label">Số tiền giao dịch</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm number"
+							<input type="text" class="form-control input-sm number" readonly
                                        name="total" id="total" placeholder="Số tiền giao dịch"
                                        value="<?php echo $item['total'] ?>">
 						</div>
@@ -126,27 +129,101 @@
 <!-- END PAGE CONTAINER -->
 
 <script type="application/javascript">
+	$('#btnSaveTransaction').click(function(){
+		showLoading();
+		$.post("?route=module/transaction/save",$('#frmTransaction').serialize(),function(data){
 
-    var type = "<?php echo $_GET['type']?>";
-    	if(type != 'popup'){
-        $('#btnSaveTransaction').click(function(){
-            showLoading();
-            $.post("?route=module/transaction/save",$('#frmTransaction').serialize(),function(data){
+			var obj = $.parseJSON(data)
+			if(obj.errorstext != '')
+			{
+				toastr.error(obj.errorstext,"Errors");
+				endLoading();
+			}
+			else
+			{
+				toastr.options.onHidden = function() { window.location = '?route=module/transaction'};
+				toastr.success('Giao dịch has been save', 'Save success', {timeOut: 1000});
+			}
 
-                var obj = $.parseJSON(data)
-                if(obj.errorstext != '')
-                {
-                    toastr.error(obj.errorstext,"Errors");
-                    endLoading();
-                }
-                else
-                {
-                    toastr.options.onHidden = function() { window.location = '?route=module/transaction'};
-                    toastr.success('Giao dịch has been save', 'Save success', {timeOut: 1000});
-                }
-
+		});
+	});
+    function Transation() {
+		this.getFee = function (accountid) {
+			$.getJSON("?route=module/accountstock/getAccountStock&accountid="+accountid,function (data) {
+				$('#frmTransaction #fee').val(data.buyfee);
             });
-        });
+        }
+        this.getTotal = function () {
+			var volume = Number(stringtoNumber($('#frmTransaction #volume').val()));
+			var price = Number(stringtoNumber($('#frmTransaction #price').val()));
+			var fee = Number(stringtoNumber($('#frmTransaction #fee').val()));
+			var total = volume*price *(1 + fee/100 );
+			$('#frmTransaction #total').val(total);
+			numberReady();
+        }
     }
+    var transation = new Transation();
+    $('#frmTransaction #accountid').change(function () {
+		transation.getFee($(this).val());
+    });
+    if($('#frmTransaction #id').val() == ''){
+        $('#frmTransaction #accountid').change();
+    }
+    $('#frmTransaction #volume').keyup(function () {
+		transation.getTotal();
+    });
+    $('#frmTransaction #price').keyup(function () {
+        transation.getTotal();
+    });
+    $('#frmTransaction #fee').keyup(function () {
+        transation.getTotal();
+    });
+    $('#frmTransaction #btnAddAccountStock').click(function () {
+		$('#modal-accountstock-form').modal();
+		$('#modal-accountstock-form .modal-body').load("?route=module/accountstock/insert&type=popup",function () {
+			$('#btnSaveAccountStock').unbind('click');
+			$('#btnSaveAccountStock').click(function () {
+                $.post("?route=module/accountstock/save",$('#frmAccountStock').serialize(),function(data){
 
+                    var obj = $.parseJSON(data)
+                    if(obj.errorstext != '')
+                    {
+                        toastr.error(obj.errorstext,"Errors");
+                        endLoading();
+                    }
+                    else
+                    {
+						var selectid = obj.accountid;
+						//Load lại combobox
+						var str = '';
+						$.getJSON("?route=module/accountstock/getAccountStockList",function (list) {
+							for(var i in list){
+							    str += '<option value="'+ list[i].accountid +'">' + list[i].text + '</option>';
+                            }
+                            $('#frmTransaction #accountid').html(str);
+                            $('#frmTransaction #accountid').val(selectid);
+                        });
+
+                        $('#modal-accountstock-form').modal('hide');
+                    }
+
+                });
+            });
+
+        });
+
+    });
 </script>
+<div class="modal fade" id="modal-accountstock-form" tabindex="-1" role="dialog" aria-labelledby="modal-default-header">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<h4 class="modal-title" id="modal-default-header">Thêm tài khoản</h4>
+			</div>
+			<div class="modal-body"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" id="btnSaveAccountStock"><span class="fa fa-save"></span> Lưu tài khoản</button>
+			</div>
+		</div>
+	</div>
+</div>
