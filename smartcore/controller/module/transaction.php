@@ -214,8 +214,8 @@ class ControllerModuleTransaction extends Controller
             $data['fee'] = $this->string->toNumber($data['fee']);
             $data['tax'] = $this->string->toNumber($data['tax']);
             $data['total'] = $this->string->toNumber($data['total']);
-            $data['costofsale'] = $this->string->toNumber($data['costofsale']);
-            $data['profit'] = $this->string->toNumber($data['profit']);
+            $data['costofsale'] = $this->model_module_transaction->getCostOfSale($data['accountid'],$data['symbol'],$data);
+            $data['profit'] = $this->string->toNumber( $data['total'] -  $data['costofsale']*$data['volume']);
             $data['id'] = $this->model_module_transaction->save($data);
             $data['errors'] = array();
             $data['errorstext'] = '';
@@ -259,8 +259,6 @@ class ControllerModuleTransaction extends Controller
 		if ("" == $data['fee']) {
 			$this->errors['fee'] = "Phí giao dich not empty";
 		}
-
-		
 
         if (count($this->errors) > 0) {
             return false;

@@ -87,10 +87,22 @@
 							<div class="input-group input-group-sm">
 								<input type="text" class="form-control number" name="fee" id="fee" placeholder="Phí giao dich"  value="<?php echo $item['fee'] ?>">
 								<span class="input-group-addon">%</span>
+								<span class="input-group-addon">=</span>
+								<span class="input-group-addon" id="txtfee">0</span>
 							</div>
 						</div>
 					</div>
-
+					<div class="form-group">
+						<label class="col-md-3 control-label">Thuế</label>
+						<div class="col-md-9">
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control number" name="tax" id="tax" placeholder="Thuế"  value="<?php echo $item['tax'] ?>">
+								<span class="input-group-addon">%</span>
+								<span class="input-group-addon">=</span>
+								<span class="input-group-addon" id="txttax">0</span>
+							</div>
+						</div>
+					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Số tiền giao dịch</label>
 						<div class="col-md-9">
@@ -100,9 +112,6 @@
 						</div>
 					</div>
 
-
-
-					
                 </div>
             </form>
         </div>
@@ -146,5 +155,45 @@
             });
         });
     }
+    function Transation() {
+        this.getFee = function (accountid) {
+            $.getJSON("?route=module/accountstock/getAccountStock&accountid="+accountid,function (data) {
+                $('#frmTransaction #fee').val(data.salefee);
+                $('#frmTransaction #tax').val(0.1);
+            });
+        }
+        this.getTotal = function () {
+            var volume = Number(stringtoNumber($('#frmTransaction #volume').val()));
+            var price = Number(stringtoNumber($('#frmTransaction #price').val()));
+            var fee = Number(stringtoNumber($('#frmTransaction #fee').val()));
+            var tax = Number(stringtoNumber($('#frmTransaction #tax').val()));
 
+            var amountfee = volume*price*fee/100;
+            var amounttax = volume*price*tax/100;
+            var total = volume*price - amountfee - amounttax;
+
+            $('#frmTransaction #txtfee').html(formatDouble(amountfee));
+            $('#frmTransaction #txttax').html(formatDouble(amounttax));
+            $('#frmTransaction #total').val(total);
+            numberReady();
+        }
+    }
+    var transation = new Transation();
+    $('#frmTransaction #accountid').change(function () {
+        transation.getFee($(this).val());
+    });
+    if($('#frmTransaction #id').val() == ''){
+        $('#frmTransaction #accountid').change();
+    }else {
+        transation.getTotal();
+    }
+    $('#frmTransaction #volume').keyup(function () {
+        transation.getTotal();
+    });
+    $('#frmTransaction #price').keyup(function () {
+        transation.getTotal();
+    });
+    $('#frmTransaction #fee').keyup(function () {
+        transation.getTotal();
+    });
 </script>

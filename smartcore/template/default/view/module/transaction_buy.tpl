@@ -95,6 +95,8 @@
 							<div class="input-group input-group-sm">
 								<input type="text" class="form-control number" name="fee" id="fee" placeholder="Phí giao dich"  value="<?php echo $item['fee'] ?>">
 								<span class="input-group-addon">%</span>
+                                <span class="input-group-addon">=</span>
+                                <span class="input-group-addon" id="txtfee">0</span>
 							</div>
 						</div>
 					</div>
@@ -160,7 +162,10 @@
 			var volume = Number(stringtoNumber($('#frmTransaction #volume').val()));
 			var price = Number(stringtoNumber($('#frmTransaction #price').val()));
 			var fee = Number(stringtoNumber($('#frmTransaction #fee').val()));
-			var total = volume*price *(1 + fee/100 );
+
+            var amountfee = volume*price*fee/100;
+			var total = volume*price + amountfee;
+            $('#frmTransaction #txtfee').html(formatDouble(amountfee));
 			$('#frmTransaction #total').val(total);
 			numberReady();
         }
@@ -171,6 +176,8 @@
     });
     if($('#frmTransaction #id').val() == ''){
         $('#frmTransaction #accountid').change();
+    }else {
+        transation.getTotal();
     }
     $('#frmTransaction #volume').keyup(function () {
 		transation.getTotal();

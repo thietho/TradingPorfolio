@@ -3,6 +3,7 @@
 /**
  * Class ControllerModuleItem
  * @property ModelModuleItem model_module_item
+ * @property ModelModuleTransaction model_module_transaction
  *
  */
 class ControllerModuleItem extends Controller
@@ -13,6 +14,7 @@ class ControllerModuleItem extends Controller
     function __construct()
     {
         $this->load->model("module/item");
+        $this->load->model("module/transaction");
     }
 
     public function index()
@@ -155,7 +157,7 @@ class ControllerModuleItem extends Controller
         return true;
     }
     public function getItem(){
-        $symbol = $this->request->get['accountid'];
+        $symbol = $this->request->get['symbol'];
         $data = $this->model_module_item->getItemSybol($symbol);
         $this->data['output'] = json_encode($data);
         $this->template = "common/output.tpl";
@@ -175,4 +177,5 @@ class ControllerModuleItem extends Controller
         $this->template = "common/output.tpl";
         $this->render();
     }
+
 }

@@ -19,6 +19,7 @@
 				<th class="sort-default" sortcol="fee">Phí giao dich</th>
 				<th class="sort-default" sortcol="tax">Thuế</th>
 				<th class="sort-default" sortcol="total">Số tiền giao dịch</th>
+				<th class="sort-default" sortcol="total">Cost of sale</th>
 				<th class="sort-default" sortcol="profit">Lợi nhuận</th>
 				<th class="sort-default" sortcol="notes">Ghi chú</th>
                 <th class="tool-title">Tool</th>
@@ -36,12 +37,15 @@
 				<td><?php echo $transaction['symbol'] ?></td>
 
 				<td><?php echo $this->document->transactiontype[$transaction['type']] ?></td>
-				<td class="number"><?php echo $this->string->numberFormate($transaction['costofsale']) ?></td>
+				<td class="number">
+					<?php echo $transaction['type']=='B'?$this->string->numberFormate($transaction['total']/$transaction['volume']):'0' ?>
+				</td>
 				<td class="number"><?php echo $this->string->numberFormate($transaction['volume']) ?></td>
 				<td class="number"><?php echo $this->string->numberFormate($transaction['price']) ?></td>
-				<td class="number"><?php echo $this->string->numberFormate($transaction['fee']) ?></td>
-				<td class="number"><?php echo $this->string->numberFormate($transaction['tax']) ?></td>
+				<td class="number"><?php echo $this->string->numberFormate($transaction['fee']/100*$transaction['volume']*$transaction['price']) ?></td>
+				<td class="number"><?php echo $this->string->numberFormate($transaction['tax']/100*$transaction['volume']*$transaction['price']) ?></td>
 				<td class="number"><?php echo $this->string->numberFormate($transaction['total']) ?></td>
+				<td class="number"><?php echo $transaction['type']=='S'?$this->string->numberFormate($transaction['costofsale']*$transaction['volume']):0 ?></td>
 				<td class="number"><?php echo $this->string->numberFormate($transaction['profit']) ?></td>
 				<td><?php echo $transaction['notes'] ?></td>
 				

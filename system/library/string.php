@@ -18,12 +18,12 @@ final class String
         $config = Registry::get('config');
         if($n==0){
             $n = $config->get('config_number_decimal');
-            if($n == 0){
+            /*if($n == 0){
                 $arr = explode('.',$num);
                 $str = number_format($arr[0]);
                 $str.= isset($arr[1])?'.'.$arr[1]:'';
                 return $str;
-            }
+            }*/
         }
 
 

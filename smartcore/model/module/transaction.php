@@ -145,5 +145,37 @@ class ModelModuleTransaction extends Model
         $value = array($this->user->getUserName(),$this->date->getToday());
         $this->db->updateData("transaction", $field, $value, $where);
     }
+
+    public function getCostOfSale($accountid,$symbol,$transaction)
+    {
+        $where = " AND accountid like '$accountid' AND symbol like '$symbol'";
+        if($transaction['id'] != ''){
+            $where .= " AND id < ".$transaction['id'];
+        }
+        $where .= " ORDER BY `createby` ASC";
+        $data = $this->getList($where);
+
+        $sumvolumebuy = 0;
+        $sumvolumesale = 0;
+        $sumtotalbuy = 0;
+        $sumtotalesale = 0;
+        $sumcostofsale = 0;
+        foreach ($data as $item){
+            if($item['type'] == 'B'){
+                $sumvolumebuy += $item['volume'];
+                $sumtotalbuy += $item['total'];
+            }else{
+                $sumvolumesale += $item['volume'];
+                $sumtotalesale += $item['total'];
+                $sumcostofsale += $item['costofsale']*$item['volume'];
+            }
+        }
+        if( $sumvolumebuy - $sumvolumesale == 0)
+            return 0;
+
+        $cost = ($sumtotalbuy - $sumcostofsale)/($sumvolumebuy - $sumvolumesale);
+        return $cost;
+
+    }
 }
 ?>
