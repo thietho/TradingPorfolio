@@ -7,7 +7,8 @@
             <li><a href="<?php echo HTTP_WEB ?>?route=module/card"><span class="icon-group-work"></span> Danh sách liên hệ</a>
             <li><a href="<?php echo HTTP_WEB ?>?route=module/item"><span class="icon-file-empty"></span> Chứng khoán</a>
             <li><a href="<?php echo HTTP_WEB ?>?route=module/accountstock"><span class="icon-briefcase"></span> Tài khoản</a>
-            <li><a href="<?php echo HTTP_WEB ?>?route=module/transaction"><span class="icon-layers"></span> Tài khoản</a>
+            <li><a href="<?php echo HTTP_WEB ?>?route=module/transaction"><span class="icon-layers"></span> Giao dịch</a>
+            <li><a href="<?php echo HTTP_WEB ?>?route=module/invoice"><span class="icon-pencil"></span> Thu chi</a>
 
         </ul>
     </nav>

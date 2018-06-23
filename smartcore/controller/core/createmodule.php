@@ -20,28 +20,19 @@ class ControllerCoreCreatemodule extends Controller
     public function index()
     {
         $this->data['output'] = '';
-        $this->obj = 'Transaction';
-        $this->objname = 'Giao dịch';
-        $this->path = 'module/transaction';
-        $this->table = 'transaction';
+        $this->obj = 'Invoice';
+        $this->objname = 'Thu chi';
+        $this->path = 'module/invoice';
+        $this->table = 'invoice';
         $this->prefix = 'trading_';
         $this->col = array(
-            'transactionid'=> 'Mã giao dịch',
-            'accountid'=> 'Tài khoản',
-            'cardid'=> 'Chủ tài khoản',
-            'transactiondate'=> 'Ngày giao dịch',
-            'receivemoneydate'=> 'Ngày nhận tiền(T+2)',
-            'receivestockdate'=> 'Ngày nhận ck(T+3)',
-            'symbol'=> 'Mã ck',
-            'name'=> 'Tên ck',
-            'type'=> 'Loại giao dịch',
-            'costofsale'=> 'Giá vốn',
-            'volume'=> 'Số lượng',
-            'price'=> 'Giá',
-            'fee'=> 'Phí giao dich',
-            'tax'=> 'Thuế',
-            'total'=> 'Số tiền giao dịch',
-            'profit'=> 'Lợi nhuận',
+            'invoiceid'=> 'Mã phiếu',
+            'invoicedate'=> 'Ngày',
+            'transactionid'=> 'Giao dịch',
+            'marginid'=> 'Khoản vay',
+            'dividendid'=> 'Cổ tức',
+            'invoicetype'=> 'Loại',
+            'amount'=> 'Số tiền',
             'notes'=> 'Ghi chú',
             'createdate'=> 'Ngày tạo',
             'createby'=> 'Tạo bởi',
@@ -50,7 +41,7 @@ class ControllerCoreCreatemodule extends Controller
             'deletedate'=> 'Ngày xóa',
             'deleteby'=> 'Xóa bởi',
         );
-        $this->maincol = 'transactionid';
+        $this->maincol = 'invoiceid';
         $this->createModel();
         $this->createController();
         $this->createView();
