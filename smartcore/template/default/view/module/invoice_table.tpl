@@ -12,13 +12,6 @@
 				<th class="sort-default" sortcol="invoicetype">Loại</th>
 				<th class="sort-default" sortcol="amount">Số tiền</th>
 				<th class="sort-default" sortcol="notes">Ghi chú</th>
-				<th class="sort-default" sortcol="createdate">Ngày tạo</th>
-				<th class="sort-default" sortcol="createby">Tạo bởi</th>
-				<th class="sort-default" sortcol="updatedate">Ngày cập nhật</th>
-				<th class="sort-default" sortcol="updateby">Cập nhật bởi</th>
-				<th class="sort-default" sortcol="deletedate">Ngày xóa</th>
-				<th class="sort-default" sortcol="deleteby">Xóa bởi</th>
-				
                 <th class="tool-title">Tool</th>
             </tr>
             <?php $index = ($objPage['pape']-1) * $objPage['itemsPerPage'];?>
@@ -26,19 +19,13 @@
             <tr>
                 <td class="text-center"><?php echo ++$index; ?></td>
                 <td><?php echo $invoice['invoiceid'] ?></td>
-				<td><?php echo $invoice['invoicedate'] ?></td>
+				<td><?php echo $this->date->formatMySQLDate($invoice['invoicedate']) ?></td>
 				<td><?php echo $invoice['transactionid'] ?></td>
 				<td><?php echo $invoice['marginid'] ?></td>
 				<td><?php echo $invoice['dividendid'] ?></td>
 				<td><?php echo $invoice['invoicetype'] ?></td>
-				<td><?php echo $invoice['amount'] ?></td>
+				<td class="number"><?php echo $this->string->numberFormate($invoice['amount']) ?></td>
 				<td><?php echo $invoice['notes'] ?></td>
-				<td><?php echo $invoice['createdate'] ?></td>
-				<td><?php echo $invoice['createby'] ?></td>
-				<td><?php echo $invoice['updatedate'] ?></td>
-				<td><?php echo $invoice['updateby'] ?></td>
-				<td><?php echo $invoice['deletedate'] ?></td>
-				<td><?php echo $invoice['deleteby'] ?></td>
 				
                 <td class="text-center">
                     <?php if($_GET['type'] == 'popup'){ ?>

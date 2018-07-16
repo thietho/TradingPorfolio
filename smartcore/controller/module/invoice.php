@@ -157,6 +157,8 @@ class ControllerModuleInvoice extends Controller
     {
         $data = $this->request->post;
         if ($this->validate($data)) {
+            $data['invoicedate'] = $this->date->formatViewDate($data['invoicedate']);
+            $data['amount'] = $this->string->toNumber($data['amount']);
             $data['id'] = $this->model_module_invoice->save($data);
             $data['errors'] = array();
             $data['errorstext'] = '';
@@ -177,48 +179,14 @@ class ControllerModuleInvoice extends Controller
     {
         $this->errors = array();
 
-        if ("" == $data['invoiceid']) {
-			$this->errors['invoiceid'] = "Mã phiếu not empty";
-		}
 		if ("" == $data['invoicedate']) {
 			$this->errors['invoicedate'] = "Ngày not empty";
 		}
-		if ("" == $data['transactionid']) {
-			$this->errors['transactionid'] = "Giao dịch not empty";
-		}
-		if ("" == $data['marginid']) {
-			$this->errors['marginid'] = "Khoản vay not empty";
-		}
-		if ("" == $data['dividendid']) {
-			$this->errors['dividendid'] = "Cổ tức not empty";
-		}
-		if ("" == $data['invoicetype']) {
-			$this->errors['invoicetype'] = "Loại not empty";
-		}
+
 		if ("" == $data['amount']) {
 			$this->errors['amount'] = "Số tiền not empty";
 		}
-		if ("" == $data['notes']) {
-			$this->errors['notes'] = "Ghi chú not empty";
-		}
-		if ("" == $data['createdate']) {
-			$this->errors['createdate'] = "Ngày tạo not empty";
-		}
-		if ("" == $data['createby']) {
-			$this->errors['createby'] = "Tạo bởi not empty";
-		}
-		if ("" == $data['updatedate']) {
-			$this->errors['updatedate'] = "Ngày cập nhật not empty";
-		}
-		if ("" == $data['updateby']) {
-			$this->errors['updateby'] = "Cập nhật bởi not empty";
-		}
-		if ("" == $data['deletedate']) {
-			$this->errors['deletedate'] = "Ngày xóa not empty";
-		}
-		if ("" == $data['deleteby']) {
-			$this->errors['deleteby'] = "Xóa bởi not empty";
-		}
+
 		
 
         if (count($this->errors) > 0) {

@@ -21,60 +21,31 @@
         <div class="row">
             <form class="form-horizontal" id="frmInvoice">
                 <input type="hidden" id="id" name="id" value="<?php echo $item['id'] ?>">
-                
+                <input type="hidden" id="invoiceid" name="invoiceid" value="<?php echo $item['invoiceid'] ?>">
+
                 <div class="col-md-6 col-md-offset-3">
-                    <div class="form-group">
-						<label class="col-md-3 control-label">Mã phiếu</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="invoiceid" id="invoiceid" placeholder="Mã phiếu"
-                                       value="<?php echo $item['invoiceid'] ?>">
-						</div>
-					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Ngày</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
+							<input type="text" class="form-control input-sm bs-datepicker"
                                        name="invoicedate" id="invoicedate" placeholder="Ngày"
-                                       value="<?php echo $item['invoicedate'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Giao dịch</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="transactionid" id="transactionid" placeholder="Giao dịch"
-                                       value="<?php echo $item['transactionid'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Khoản vay</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="marginid" id="marginid" placeholder="Khoản vay"
-                                       value="<?php echo $item['marginid'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Cổ tức</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="dividendid" id="dividendid" placeholder="Cổ tức"
-                                       value="<?php echo $item['dividendid'] ?>">
+                                       value="<?php echo $this->date->formatMySQLDate($item['invoicedate']) ?>">
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Loại</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="invoicetype" id="invoicetype" placeholder="Loại"
-                                       value="<?php echo $item['invoicetype'] ?>">
+							<select class="form-control input-sm" name="invoicetype" id="invoicetype">
+								<?php foreach($this->document->invoicestype as $key => $val){ ?>
+								<option value="<?php echo $key?>" <?php echo $key==$item['invoicetype']?'selected':'' ?> ><?php echo $val?></option>
+								<?php } ?>
+							</select>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Số tiền</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
+							<input type="text" class="form-control input-sm number"
                                        name="amount" id="amount" placeholder="Số tiền"
                                        value="<?php echo $item['amount'] ?>">
 						</div>
@@ -82,57 +53,8 @@
 					<div class="form-group">
 						<label class="col-md-3 control-label">Ghi chú</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="notes" id="notes" placeholder="Ghi chú"
-                                       value="<?php echo $item['notes'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Ngày tạo</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="createdate" id="createdate" placeholder="Ngày tạo"
-                                       value="<?php echo $item['createdate'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Tạo bởi</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="createby" id="createby" placeholder="Tạo bởi"
-                                       value="<?php echo $item['createby'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Ngày cập nhật</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="updatedate" id="updatedate" placeholder="Ngày cập nhật"
-                                       value="<?php echo $item['updatedate'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Cập nhật bởi</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="updateby" id="updateby" placeholder="Cập nhật bởi"
-                                       value="<?php echo $item['updateby'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Ngày xóa</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="deletedate" id="deletedate" placeholder="Ngày xóa"
-                                       value="<?php echo $item['deletedate'] ?>">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Xóa bởi</label>
-						<div class="col-md-9">
-							<input type="text" class="form-control input-sm"
-                                       name="deleteby" id="deleteby" placeholder="Xóa bởi"
-                                       value="<?php echo $item['deleteby'] ?>">
+							<textarea class="form-control input-sm"
+									  name="notes" id="notes" placeholder="Ghi chú"><?php echo $item['notes'] ?></textarea>
 						</div>
 					</div>
 					

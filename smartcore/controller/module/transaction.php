@@ -5,6 +5,7 @@
  * @property ModelModuleTransaction model_module_transaction
  * @property ModelModuleAccountstock model_module_accountstock
  * @property ModelModuleItem model_module_item
+ * @property ModelModuleInvoice model_module_invoice
  *
  */
 class ControllerModuleTransaction extends Controller
@@ -16,6 +17,7 @@ class ControllerModuleTransaction extends Controller
     {
         $this->load->model("module/transaction");
         $this->load->model("module/accountstock");
+        $this->load->model("module/invoice");
         $this->data['accountstocks'] = $this->model_module_accountstock->getList();
         $this->load->model("module/item");
         $this->data['itemcks'] = $this->model_module_item->getList();
@@ -217,6 +219,28 @@ class ControllerModuleTransaction extends Controller
             $data['costofsale'] = $this->model_module_transaction->getCostOfSale($data['accountid'],$data['symbol'],$data);
             $data['profit'] = $this->string->toNumber( $data['total'] -  $data['costofsale']*$data['volume']);
             $data['id'] = $this->model_module_transaction->save($data);
+            //Luu vào thu chi
+            if($data['price']>0){
+                $where = " AND transactionid like '".$data['transactionid']."'";
+                $invoices = $this->model_module_invoice->getList($where);
+                $invoice = array();
+                if(count($invoices)){
+                    $invoice = $invoices[0];
+                }
+                $invoice['transactionid'] = $data['transactionid'];
+                if ($data['type']=='B'){
+                    $invoice['invoicetype'] = "EXP";
+                    $invoice['invoicedate'] = $data['transactiondate'];
+                    $invoice['notes'] = "Mua cổ phiếu ".$data['symbol'];
+                }else{
+                    $invoice['invoicetype'] = "INC";
+                    $invoice['invoicedate'] = $data['receivemoneydate'];
+                    $invoice['notes'] = "Bán cổ phiếu ".$data['symbol'];
+                }
+                $invoice['amount'] = $data['total'];
+                $this->model_module_invoice->save($invoice);
+            }
+
             $data['errors'] = array();
             $data['errorstext'] = '';
 

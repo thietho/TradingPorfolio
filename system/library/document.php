@@ -39,6 +39,10 @@ final class Document
         'pending' => 'Chờ duyệt',
         'approved' => 'Đã duyệt'
     );
+    public $invoicestype = array(
+        'INC' => 'Thu',
+        'EXP' => 'Chi'
+    );
 
     public $cardtype = array(
         'customer' => 'Customer',

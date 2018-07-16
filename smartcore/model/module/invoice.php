@@ -42,7 +42,7 @@ class ModelModuleInvoice extends Model
     {
         $sql = "Select count(*) as total
                 from `invoice`
-				where 1=1 ". $where;
+				where deleteby = '' ". $where;
 
         $query = $this->db->query($sql);
         return $query->row['total'];
@@ -52,7 +52,7 @@ class ModelModuleInvoice extends Model
     {
         $sql = "Select *
                 from `invoice`
-				where 1=1 ";
+				where deleteby = '' ";
 
         $sql .= $where;
         if ($to > 0) {
@@ -90,6 +90,8 @@ class ModelModuleInvoice extends Model
     public function save($data)
     {
         $obj = $this->getItem($data['id']);
+
+
         $value = array();
         if (count($obj)) {
             //update old item
@@ -98,11 +100,18 @@ class ModelModuleInvoice extends Model
                     $obj[$col] = $data[$col];
             }
             $data = $obj;
+            $data['updatedate'] = $this->date->getToday();
+            $data['updateby'] = $this->user->getUserName();
         } else {
             //insert new item
-
+            $data['createdate'] = $this->date->getToday();
+            $data['createby'] = $this->user->getUserName();
+            $data['updatedate'] = $this->date->getToday();
+            $data['updateby'] = $this->user->getUserName();
         }
-
+        if($data['invoiceid'] == ''){
+            $data['invoiceid'] = $this->createId($data['invoicetype']);
+        }
 
         foreach ($this->arr_col as $col) {
             $value[] = $this->db->escape(@$data[$col]);
@@ -116,14 +125,21 @@ class ModelModuleInvoice extends Model
             $where = "id = '" . $data['id'] . "'";
             $this->db->updateData("invoice", $field, $value, $where);
         }
-        return $data['id'];
+        return $data['invoiceid'];
     }
 
+    public function destroy($id)
+    {
+        $where = "id = '" . $id . "'";
+        $this->db->deleteData("invoice", $where);
+    }
 
     public function delete($id)
     {
         $where = "id = '" . $id . "'";
-        $this->db->deleteData("invoice", $where);
+        $field = array('deleteby','deletedate');
+        $value = array($this->user->getUserName(),$this->date->getToday());
+        $this->db->updateData("invoice", $field, $value, $where);
     }
 }
 ?>
