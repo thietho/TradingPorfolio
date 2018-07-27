@@ -278,6 +278,16 @@ final class Document
 									where symbol ='" . $symbol . "' ");
         return $query->row[$name];
     }
+    public function getDividendCash($id,$name = '')
+    {
+        $query = $this->db->query("Select `dividendcash`.*
+									from `dividendcash`
+									where id ='" . $id . "' ");
+        if($name == ''){
+            return $query->row['symbol']." - ".$query->row['accountid']." - ".$query->row['notes'];
+        }
+        return $query->row[$name];
+    }
     public function getUserType($usertypeid,$name = 'usertypename')
     {
         $query = $this->db->query("Select `usertype`.*

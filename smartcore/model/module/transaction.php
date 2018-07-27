@@ -40,6 +40,13 @@ class ModelModuleTransaction extends Model
 									where id ='" . $id . "' ");
         return $query->row;
     }
+    public function getItemById($transactionid)
+    {
+        $query = $this->db->query("Select `transaction`.*
+									from `transaction`
+									where transactionid ='" . $transactionid . "' ");
+        return $query->row;
+    }
 
     /**
      * @param string $where
@@ -134,16 +141,29 @@ class ModelModuleTransaction extends Model
     }
     public function destroy($id)
     {
+        //Destroy invoice
+        $transaction = $this->getItem($id);
+        $where = "transactionid = '" . $transaction['transactionid'] . "'";
+        $this->db->deleteData("invoice", $where);
+
         $where = "id = '" . $id . "'";
         $this->db->deleteData("transaction", $where);
     }
 
     public function delete($id)
     {
+        //Xóa invoice
+        $transaction = $this->getItem($id);
+        $where = "transactionid = '" . $transaction['transactionid'] . "'";
+        $field = array('deleteby','deletedate');
+        $value = array($this->user->getUserName(),$this->date->getToday());
+        $this->db->updateData("invoice", $field, $value, $where);
+
         $where = "id = '" . $id . "'";
         $field = array('deleteby','deletedate');
         $value = array($this->user->getUserName(),$this->date->getToday());
         $this->db->updateData("transaction", $field, $value, $where);
+
     }
 
     public function getCostOfSale($accountid,$symbol,$transaction)

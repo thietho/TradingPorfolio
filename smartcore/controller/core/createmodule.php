@@ -20,19 +20,22 @@ class ControllerCoreCreatemodule extends Controller
     public function index()
     {
         $this->data['output'] = '';
-        $this->obj = 'Invoice';
-        $this->objname = 'Thu chi';
-        $this->path = 'module/invoice';
-        $this->table = 'invoice';
+        $this->obj = 'DividendStock';
+        $this->objname = 'Cổ tức cổ phiếu';
+        $this->path = 'module/dividendstock';
+        $this->table = 'dividendstock';
         $this->prefix = 'trading_';
         $this->col = array(
-            'invoiceid'=> 'Mã phiếu',
-            'invoicedate'=> 'Ngày',
-            'transactionid'=> 'Giao dịch',
-            'marginid'=> 'Khoản vay',
-            'dividendid'=> 'Cổ tức',
-            'invoicetype'=> 'Loại',
-            'amount'=> 'Số tiền',
+            'receivedate'=> 'Ngày nhận',
+            'deadline'=> 'Ngày chốt quyền',
+            'symbol'=> 'Mã chứng khoán',
+            'accountid'=> 'Tài khoản nhận',
+            'transactionid' => 'Mã giao dịch',
+            'price'=> 'Giá phát hành',
+            'dividendrate'=> 'Tỷ lệ phát hành',
+            'quantity'=> 'Số lượng mua',
+            'quantityallowbuy'=> 'Số lượng được mua',
+            'quantityallowreceive'=> 'Số cổ phiếu được nhận',
             'notes'=> 'Ghi chú',
             'createdate'=> 'Ngày tạo',
             'createby'=> 'Tạo bởi',
@@ -41,7 +44,7 @@ class ControllerCoreCreatemodule extends Controller
             'deletedate'=> 'Ngày xóa',
             'deleteby'=> 'Xóa bởi',
         );
-        $this->maincol = 'invoiceid';
+        $this->maincol = 'symbol';
         $this->createModel();
         $this->createController();
         $this->createView();

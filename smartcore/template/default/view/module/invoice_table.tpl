@@ -22,7 +22,7 @@
 				<td><?php echo $this->date->formatMySQLDate($invoice['invoicedate']) ?></td>
 				<td><?php echo $invoice['transactionid'] ?></td>
 				<td><?php echo $invoice['marginid'] ?></td>
-				<td><?php echo $invoice['dividendid'] ?></td>
+				<td><?php echo $this->document->getDividendCash($invoice['dividendid']) ?></td>
 				<td><?php echo $invoice['invoicetype'] ?></td>
 				<td class="number"><?php echo $this->string->numberFormate($invoice['amount']) ?></td>
 				<td><?php echo $invoice['notes'] ?></td>
