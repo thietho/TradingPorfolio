@@ -20,23 +20,21 @@ class ControllerCoreCreatemodule extends Controller
     public function index()
     {
         $this->data['output'] = '';
-        $this->obj = 'DividendStock';
-        $this->objname = 'Cổ tức cổ phiếu';
-        $this->path = 'module/dividendstock';
-        $this->table = 'dividendstock';
+        $this->obj = 'Margin';
+        $this->objname = 'Khoản vay';
+        $this->path = 'module/margin';
+        $this->table = 'margin';
         $this->prefix = 'trading_';
         $this->col = array(
-            'receivedate'=> 'Ngày nhận',
-            'deadline'=> 'Ngày chốt quyền',
-            'symbol'=> 'Mã chứng khoán',
+            'opendate'=> 'Ngày phụ lục',
+            'closedate'=> 'Ngày thanh lý',
+            'amount'=> 'Giá trị',
+            'countdate' => 'Ngày nắm giử',
+            'rate'=> 'Lãi xuất',
+            'totalpay'=> 'Tổng trả',
+            'cardid'=> 'Người nhận',
             'accountid'=> 'Tài khoản nhận',
-            'transactionid' => 'Mã giao dịch',
-            'price'=> 'Giá phát hành',
-            'dividendrate'=> 'Tỷ lệ phát hành',
-            'quantity'=> 'Số lượng mua',
-            'quantityallowbuy'=> 'Số lượng được mua',
-            'quantityallowreceive'=> 'Số cổ phiếu được nhận',
-            'notes'=> 'Ghi chú',
+            'transactionid'=> 'Tạo từ giao dịch',
             'createdate'=> 'Ngày tạo',
             'createby'=> 'Tạo bởi',
             'updatedate'=> 'Ngày cập nhật',

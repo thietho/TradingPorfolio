@@ -10,6 +10,7 @@
             <li><a href="<?php echo HTTP_WEB ?>?route=module/transaction"><span class="icon-layers"></span> Giao dịch</a>
             <li><a href="<?php echo HTTP_WEB ?>?route=module/dividendcash"><span class="icon-layers"></span> Cổ tức tiền mặt</a>
             <li><a href="<?php echo HTTP_WEB ?>?route=module/dividendstock"><span class="icon-layers"></span> Cổ tức cổ phiếu</a>
+            <li><a href="<?php echo HTTP_WEB ?>?route=module/margin"><span class="icon-layers"></span>Khoản vay</a>
             <li><a href="<?php echo HTTP_WEB ?>?route=module/invoice"><span class="icon-pencil"></span> Thu chi</a>
 
         </ul>
