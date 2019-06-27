@@ -5,7 +5,7 @@
  *
  * @property ModelCoreSetting model_core_setting
  * @property ModelModuleCard model_module_card
- * @property ModelModuleStore model_module_store
+
  *
  */
 class ControllerCoreSetting extends Controller
@@ -16,7 +16,7 @@ class ControllerCoreSetting extends Controller
     function __construct()
     {
         $this->load->model("module/card");
-        $this->load->model("module/store");
+
         $this->load->model("core/setting");
         $this->setting = $this->model_core_setting->getSettingInfo();
 
@@ -37,7 +37,7 @@ class ControllerCoreSetting extends Controller
         $datasize = $this->model_core_setting->getDataBaseSize();
         //print_r($datasize);
         $folder = "../";
-        $filesize = $this->model_core_setting->foldersize($folder);
+        //$filesize = $this->model_core_setting->foldersize($folder);
         //echo $filesize/1024/1024;
         $this->data['item']['storageused'] = $this->string->numberFormate($datasize['datasizemb'] + $filesize/1024/1024);
         $this->data['item']['userlimt'] = $this->setting['userlimt'];
@@ -46,8 +46,7 @@ class ControllerCoreSetting extends Controller
         $where = " AND account <> '' AND cardtype = 'staff'";
         $datacard = $this->model_module_card->getList($where);
         $this->data['item']['countuser'] = count($datacard);
-        $datastore = $this->model_module_store->getList();
-        $this->data['item']['countstore'] = count($datastore);
+
         $this->template = "core/setting.tpl";
         $this->layout = "page/home";
         $this->render();

@@ -20,29 +20,17 @@ class ControllerCoreCreatemodule extends Controller
     public function index()
     {
         $this->data['output'] = '';
-        $this->obj = 'Margin';
-        $this->objname = 'Khoản vay';
-        $this->path = 'module/margin';
-        $this->table = 'margin';
+        $this->obj = 'Test';
+        $this->objname = 'test';
+        $this->path = 'module/test';
+        $this->table = 'test';
         $this->prefix = 'trading_';
         $this->col = array(
-            'opendate'=> 'Ngày phụ lục',
-            'closedate'=> 'Ngày thanh lý',
-            'amount'=> 'Giá trị',
-            'countdate' => 'Ngày nắm giử',
-            'rate'=> 'Lãi xuất',
-            'totalpay'=> 'Tổng trả',
-            'cardid'=> 'Người nhận',
-            'accountid'=> 'Tài khoản nhận',
-            'transactionid'=> 'Tạo từ giao dịch',
-            'createdate'=> 'Ngày tạo',
-            'createby'=> 'Tạo bởi',
-            'updatedate'=> 'Ngày cập nhật',
-            'updateby'=> 'Cập nhật bởi',
-            'deletedate'=> 'Ngày xóa',
-            'deleteby'=> 'Xóa bởi',
+            'name'=> 'Họ tên',
+            'nam'=> 'Năm sinh',
+            
         );
-        $this->maincol = 'symbol';
+        $this->maincol = 'name';
         $this->createModel();
         $this->createController();
         $this->createView();

@@ -1,7 +1,7 @@
 <?php
 // CONFIG DOMAIN
-$base_domain = 'localhost'; //ex: google.com
-$domain = 'localhost'; //ex: www.google.com
+$base_domain = 'localhost:81'; //ex: google.com
+$domain = 'localhost:81'; //ex: www.google.com
 $main_http_server = "http://$domain/TradingPorfolio/";
 $root_http_server = "http://$domain/TradingPorfolio/";
 $root_https_server = "https://$domain/TradingPorfolio/";
