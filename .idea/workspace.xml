@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d514d31-d7fa-4e7e-a1ff-4a70a23fe765" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbconfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/dbconfig.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcore/controller/core/createmodule.php" beforeDir="false" afterPath="$PROJECT_DIR$/smartcore/controller/core/createmodule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcore/controller/core/setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/smartcore/controller/core/setting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartcore_setting/default/cachedb/cache.Language_getDataLanguage_vn.1534081227" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartcore_setting/default/cachedb/cache.Language_getDataLanguage_vn.1555923241" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,13 +12,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dbconfig.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="41" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="41" />
+              <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -53,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartcore/controller/test/facility.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="255">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -107,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/smartcore/template/default/view/common/header.tpl" />
         <option value="$PROJECT_DIR$/smartcore/controller/module/card.php" />
         <option value="$PROJECT_DIR$/smartcore/template/default/view/module/card_setaccount.tpl" />
         <option value="$PROJECT_DIR$/smartcore/controller/common/header.php" />
@@ -158,6 +159,7 @@
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/smartcore/controller/core/createmodule.php" />
         <option value="$PROJECT_DIR$/smartcore/controller/core/setting.php" />
+        <option value="$PROJECT_DIR$/dbconfig.php" />
       </list>
     </option>
   </component>
@@ -173,7 +175,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,23 +187,11 @@
               <item name="TradingPorfolio" type="462c0819:PsiDirectoryNode" />
               <item name="smartcore" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="smartcore" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TradingPorfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TradingPorfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="smartcore" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,17 +259,17 @@
       <workItem from="1555435411820" duration="298000" />
       <workItem from="1555770639271" duration="1882000" />
       <workItem from="1561649033800" duration="110000" />
+      <workItem from="1564304586547" duration="752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73922000" />
+    <option name="totallyTimeSpent" value="74674000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26606685" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2700454" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -631,20 +620,6 @@
         <state relative-caret-position="-357" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbconfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/smartcore/model/core/setting.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1496">
@@ -668,8 +643,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartcore/controller/test/facility.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="3" />
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbconfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
         </state>
       </provider>
     </entry>
